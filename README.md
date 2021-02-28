@@ -7,6 +7,10 @@ I have learned some technics about useing HLS to reorganize the C++ code to gene
 By the end of February, I have completed the construction of configurable convolution function based on systolic array for various input and output sizes. This will help me to explore the design space for specific network in the next future.
 
 # Using Systolic Array implement flexible convolution kernel
+![avatar](./doc/脉冲阵列2.jpg)
+As shown in the picture above, in the primitive design, the structure of Systolic Array is straightforward. Each PE perform MACC on the input data that are passed form the previous processers. Every row of the Systolic Array produces the one corresponding row of the output feature map, ans every colum of it produces the one corresponding channel of the output feature map. The Systolic Array has M rows and N colums, a slice of output feature map which has M rows, N channels and all colums can be calculated at one time. As a result，the slice of input feature map which is needed for producing the corresponding row of the output feature map is supposed to flow along the row of the Systolic Array, the slice of weights which is needed for producing the corresponding channel of the output feature map should flow along the colum. Then I split the logic of loading data from the PE , for the preprocess that the function calculates the location of data used for each row or colum in Input Buffer or Weight Buffer needs a lot of computation. In general, the basic idea of using Systolic Array implement convolution is to unroll the output row loop with a factor of M and unroll the output channel loop with a factor of N.
+However, 
+![avatar](./doc/脉冲阵列1.jpg)
 ```
 Input: In_ddr, W_ddr, Out_ddr, Rin, Cin, CHin, Rout, Cout, CHout, padding, stride
 /*
@@ -49,9 +53,5 @@ while output_row < Rout do
   out_row <- output_row + M
   input_row <- input_row + stride * M
 end
-
-
-
 ```
-![avatar](./doc/脉冲阵列2.jpg)
-![avatar](./doc/脉冲阵列1.jpg)
+
