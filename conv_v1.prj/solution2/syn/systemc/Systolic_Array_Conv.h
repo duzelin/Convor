@@ -15,8 +15,8 @@
 #include "Read_In_buf_line.h"
 #include "Write_C_buf.h"
 #include "Read_W_buf.h"
-#include "Systolic_Array_Coudo.h"
-#include "Systolic_Array_CowdI.h"
+#include "Systolic_Array_Cotde.h"
+#include "Systolic_Array_Covdy.h"
 #include "Systolic_Array_Conv_AXILiteS_s_axi.h"
 #include "Systolic_Array_Conv_gmem_m_axi.h"
 
@@ -130,9 +130,9 @@ struct Systolic_Array_Conv : public sc_module {
     ofstream mHdltvoutHandle;
     Systolic_Array_Conv_AXILiteS_s_axi<C_S_AXI_AXILITES_ADDR_WIDTH,C_S_AXI_AXILITES_DATA_WIDTH>* Systolic_Array_Conv_AXILiteS_s_axi_U;
     Systolic_Array_Conv_gmem_m_axi<0,32,32,5,16,16,16,16,C_M_AXI_GMEM_ID_WIDTH,C_M_AXI_GMEM_ADDR_WIDTH,C_M_AXI_GMEM_DATA_WIDTH,C_M_AXI_GMEM_AWUSER_WIDTH,C_M_AXI_GMEM_ARUSER_WIDTH,C_M_AXI_GMEM_WUSER_WIDTH,C_M_AXI_GMEM_RUSER_WIDTH,C_M_AXI_GMEM_BUSER_WIDTH,C_M_AXI_GMEM_USER_VALUE,C_M_AXI_GMEM_PROT_VALUE,C_M_AXI_GMEM_CACHE_VALUE>* Systolic_Array_Conv_gmem_m_axi_U;
-    Systolic_Array_Coudo* In_buffer_U;
-    Systolic_Array_Coudo* W_buffer_U;
-    Systolic_Array_CowdI* Out_buffer_U;
+    Systolic_Array_Cotde* In_buffer_U;
+    Systolic_Array_Cotde* W_buffer_U;
+    Systolic_Array_Covdy* Out_buffer_U;
     PE_array* grp_PE_array_fu_246;
     Read_In_buf_line* grp_Read_In_buf_line_fu_275;
     Write_C_buf* grp_Write_C_buf_fu_296;

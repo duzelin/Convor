@@ -3746,7 +3746,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Systolic_Array_Cocud_U35</rtlName>
+              <rtlName>Systolic_Array_Cobkb_U34</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4306,7 +4306,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Systolic_Array_Cocud_U36</rtlName>
+              <rtlName>Systolic_Array_Cobkb_U35</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4922,7 +4922,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Systolic_Array_Cocud_U37</rtlName>
+              <rtlName>Systolic_Array_Cobkb_U36</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -5594,7 +5594,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Systolic_Array_Cocud_U38</rtlName>
+              <rtlName>Systolic_Array_Cobkb_U37</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -10624,7 +10624,7 @@
         <count>4</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>Systolic_Array_Cocud_U35 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U34 (Systolic_Array_Cobkb)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
@@ -10639,7 +10639,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U36 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U35 (Systolic_Array_Cobkb)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -10654,7 +10654,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U37 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U36 (Systolic_Array_Cobkb)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -10669,7 +10669,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U38 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U37 (Systolic_Array_Cobkb)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -13964,28 +13964,28 @@
         <count>4</count>
         <item_version>0</item_version>
         <item>
-          <first>Systolic_Array_Cocud_U35</first>
+          <first>Systolic_Array_Cobkb_U34</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U36</first>
+          <first>Systolic_Array_Cobkb_U35</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U37</first>
+          <first>Systolic_Array_Cobkb_U36</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U38</first>
+          <first>Systolic_Array_Cobkb_U37</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -13996,7 +13996,7 @@
         <count>4</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>Systolic_Array_Cocud_U35 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U34 (Systolic_Array_Cobkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14004,7 +14004,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U36 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U35 (Systolic_Array_Cobkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14012,7 +14012,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U37 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U36 (Systolic_Array_Cobkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14020,7 +14020,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_Cocud_U38 (Systolic_Array_Cocud)</first>
+          <first>Systolic_Array_Cobkb_U37 (Systolic_Array_Cobkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

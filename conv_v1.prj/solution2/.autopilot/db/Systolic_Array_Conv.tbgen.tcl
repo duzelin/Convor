@@ -209,7 +209,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "163", "EstimateLatencyMax" : "3758462",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "163", "EstimateLatencyMax" : "3128462",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -224,9 +224,9 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "gmem", "Type" : "MAXI", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "318", "SubInstance" : "grp_Read_W_buf_fu_311", "Port" : "W_ddr"},
 					{"ID" : "317", "SubInstance" : "grp_Write_C_buf_fu_296", "Port" : "Out_ddr"},
-					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "In_ddr"}]},
+					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "In_ddr"},
+					{"ID" : "318", "SubInstance" : "grp_Read_W_buf_fu_311", "Port" : "W_ddr"}]},
 			{"Name" : "In_ddr", "Type" : "None", "Direction" : "I"},
 			{"Name" : "W_ddr", "Type" : "None", "Direction" : "I"},
 			{"Name" : "Out_ddr", "Type" : "None", "Direction" : "I"},
@@ -241,8 +241,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "K", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_chin_s", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "p_chin_s"},
-					{"ID" : "6", "SubInstance" : "grp_PE_array_fu_246", "Port" : "p_chin_s"}]},
+					{"ID" : "6", "SubInstance" : "grp_PE_array_fu_246", "Port" : "p_chin_s"},
+					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "p_chin_s"}]},
 			{"Name" : "p_chout_s", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "317", "SubInstance" : "grp_Write_C_buf_fu_296", "Port" : "p_chout_s"},
@@ -274,8 +274,8 @@ set RtlHierarchyInfo {[
 					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "p_cinp_s"}]},
 			{"Name" : "In_buffer_length", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "In_buffer_length"},
-					{"ID" : "6", "SubInstance" : "grp_PE_array_fu_246", "Port" : "In_buffer_length"}]},
+					{"ID" : "6", "SubInstance" : "grp_PE_array_fu_246", "Port" : "In_buffer_length"},
+					{"ID" : "313", "SubInstance" : "grp_Read_In_buf_line_fu_275", "Port" : "In_buffer_length"}]},
 			{"Name" : "In_buffer_start", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "6", "SubInstance" : "grp_PE_array_fu_246", "Port" : "In_buffer_start"}]},
@@ -400,7 +400,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "7",
-		"StartFifo" : "start_for_PE_arrafYi_U",
+		"StartFifo" : "start_for_PE_arraeOg_U",
 		"Port" : [
 			{"Name" : "row", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "7", "DependentChan" : "78",
 				"BlockSignal" : [
@@ -487,10 +487,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "In_buffer_start", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_cin_s", "Type" : "None", "Direction" : "I"},
 			{"Name" : "In_buffer_length", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "10", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cocud_U35", "Parent" : "9"},
-	{"ID" : "11", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cocud_U36", "Parent" : "9"},
-	{"ID" : "12", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cocud_U37", "Parent" : "9"},
-	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cocud_U38", "Parent" : "9"},
+	{"ID" : "10", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cobkb_U34", "Parent" : "9"},
+	{"ID" : "11", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cobkb_U35", "Parent" : "9"},
+	{"ID" : "12", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cobkb_U36", "Parent" : "9"},
+	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_In_ALL_U0.Systolic_Array_Cobkb_U37", "Parent" : "9"},
 	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Load_W_ALL_U0", "Parent" : "6",
 		"CDFG" : "Load_W_ALL",
 		"Protocol" : "ap_ctrl_hs",
@@ -615,8 +615,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "p_r_out6_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "p_chout_s", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_r_s", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "16", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE21_U0.Systolic_Array_CodEe_U66", "Parent" : "15"},
-	{"ID" : "17", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE21_U0.Systolic_Array_CoeOg_U67", "Parent" : "15"},
+	{"ID" : "16", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE21_U0.Systolic_Array_Cocud_U65", "Parent" : "15"},
+	{"ID" : "17", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE21_U0.Systolic_Array_CodEe_U66", "Parent" : "15"},
 	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE_array_Block_preh_5_U0", "Parent" : "6",
 		"CDFG" : "PE_array_Block_preh_5",
 		"Protocol" : "ap_ctrl_hs",
@@ -631,7 +631,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "8",
-		"StartFifo" : "start_for_PE_arrag8j_U",
+		"StartFifo" : "start_for_PE_arrafYi_U",
 		"Port" : [
 			{"Name" : "cho", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "8", "DependentChan" : "86",
 				"BlockSignal" : [
@@ -727,8 +727,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out5", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "34", "DependentChan" : "134",
 				"BlockSignal" : [
 					{"Name" : "p_r_out5_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "20", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE22_U0.Systolic_Array_CodEe_U97", "Parent" : "19"},
-	{"ID" : "21", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE22_U0.Systolic_Array_CoeOg_U98", "Parent" : "19"},
+	{"ID" : "20", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE22_U0.Systolic_Array_Cocud_U96", "Parent" : "19"},
+	{"ID" : "21", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE22_U0.Systolic_Array_CodEe_U97", "Parent" : "19"},
 	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE_array_Block_preh_4_U0", "Parent" : "6",
 		"CDFG" : "PE_array_Block_preh_4",
 		"Protocol" : "ap_ctrl_hs",
@@ -743,7 +743,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "8",
-		"StartFifo" : "start_for_PE_arrahbi_U",
+		"StartFifo" : "start_for_PE_arrag8j_U",
 		"Port" : [
 			{"Name" : "cho", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "8", "DependentChan" : "87",
 				"BlockSignal" : [
@@ -839,8 +839,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out5", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "37", "DependentChan" : "150",
 				"BlockSignal" : [
 					{"Name" : "p_r_out5_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "24", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE23_U0.Systolic_Array_CodEe_U125", "Parent" : "23"},
-	{"ID" : "25", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE23_U0.Systolic_Array_CoeOg_U126", "Parent" : "23"},
+	{"ID" : "24", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE23_U0.Systolic_Array_Cocud_U124", "Parent" : "23"},
+	{"ID" : "25", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE23_U0.Systolic_Array_CodEe_U125", "Parent" : "23"},
 	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE_array_Block_preh_3_U0", "Parent" : "6",
 		"CDFG" : "PE_array_Block_preh_3",
 		"Protocol" : "ap_ctrl_hs",
@@ -855,7 +855,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "8",
-		"StartFifo" : "start_for_PE_arraibs_U",
+		"StartFifo" : "start_for_PE_arrahbi_U",
 		"Port" : [
 			{"Name" : "cho", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "8", "DependentChan" : "88",
 				"BlockSignal" : [
@@ -942,8 +942,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "40", "DependentChan" : "163",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "28", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE24_U0.Systolic_Array_CodEe_U153", "Parent" : "27"},
-	{"ID" : "29", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE24_U0.Systolic_Array_CoeOg_U154", "Parent" : "27"},
+	{"ID" : "28", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE24_U0.Systolic_Array_Cocud_U152", "Parent" : "27"},
+	{"ID" : "29", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE24_U0.Systolic_Array_CodEe_U153", "Parent" : "27"},
 	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE_array_Block_preh_2_U0", "Parent" : "6",
 		"CDFG" : "PE_array_Block_preh_2",
 		"Protocol" : "ap_ctrl_hs",
@@ -958,7 +958,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "8",
-		"StartFifo" : "start_for_PE_arrajbC_U",
+		"StartFifo" : "start_for_PE_arraibs_U",
 		"Port" : [
 			{"Name" : "row", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "8", "DependentChan" : "81",
 				"BlockSignal" : [
@@ -1045,8 +1045,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "44", "DependentChan" : "176",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "32", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE25_U0.Systolic_Array_CodEe_U181", "Parent" : "31"},
-	{"ID" : "33", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE25_U0.Systolic_Array_CoeOg_U182", "Parent" : "31"},
+	{"ID" : "32", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE25_U0.Systolic_Array_Cocud_U180", "Parent" : "31"},
+	{"ID" : "33", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE25_U0.Systolic_Array_CodEe_U181", "Parent" : "31"},
 	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE26_U0", "Parent" : "6", "Child" : ["35", "36"],
 		"CDFG" : "PE26",
 		"Protocol" : "ap_ctrl_hs",
@@ -1117,8 +1117,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "47", "DependentChan" : "185",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "35", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE26_U0.Systolic_Array_CodEe_U201", "Parent" : "34"},
-	{"ID" : "36", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE26_U0.Systolic_Array_CoeOg_U202", "Parent" : "34"},
+	{"ID" : "35", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE26_U0.Systolic_Array_Cocud_U200", "Parent" : "34"},
+	{"ID" : "36", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE26_U0.Systolic_Array_CodEe_U201", "Parent" : "34"},
 	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE27_U0", "Parent" : "6", "Child" : ["38", "39"],
 		"CDFG" : "PE27",
 		"Protocol" : "ap_ctrl_hs",
@@ -1189,8 +1189,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "50", "DependentChan" : "194",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "38", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE27_U0.Systolic_Array_CodEe_U221", "Parent" : "37"},
-	{"ID" : "39", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE27_U0.Systolic_Array_CoeOg_U222", "Parent" : "37"},
+	{"ID" : "38", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE27_U0.Systolic_Array_Cocud_U220", "Parent" : "37"},
+	{"ID" : "39", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE27_U0.Systolic_Array_CodEe_U221", "Parent" : "37"},
 	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE28_U0", "Parent" : "6", "Child" : ["41", "42"],
 		"CDFG" : "PE28",
 		"Protocol" : "ap_ctrl_hs",
@@ -1270,8 +1270,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "53", "DependentChan" : "206",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "41", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE28_U0.Systolic_Array_CodEe_U241", "Parent" : "40"},
-	{"ID" : "42", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE28_U0.Systolic_Array_CoeOg_U242", "Parent" : "40"},
+	{"ID" : "41", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE28_U0.Systolic_Array_Cocud_U240", "Parent" : "40"},
+	{"ID" : "42", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE28_U0.Systolic_Array_CodEe_U241", "Parent" : "40"},
 	{"ID" : "43", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE_array_Block_preh_1_U0", "Parent" : "6",
 		"CDFG" : "PE_array_Block_preh_1",
 		"Protocol" : "ap_ctrl_hs",
@@ -1286,7 +1286,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "8",
-		"StartFifo" : "start_for_PE_arrakbM_U",
+		"StartFifo" : "start_for_PE_arrajbC_U",
 		"Port" : [
 			{"Name" : "row", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "8", "DependentChan" : "82",
 				"BlockSignal" : [
@@ -1373,8 +1373,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "57", "DependentChan" : "219",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "45", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE29_U0.Systolic_Array_CodEe_U269", "Parent" : "44"},
-	{"ID" : "46", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE29_U0.Systolic_Array_CoeOg_U270", "Parent" : "44"},
+	{"ID" : "45", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE29_U0.Systolic_Array_Cocud_U268", "Parent" : "44"},
+	{"ID" : "46", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE29_U0.Systolic_Array_CodEe_U269", "Parent" : "44"},
 	{"ID" : "47", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE30_U0", "Parent" : "6", "Child" : ["48", "49"],
 		"CDFG" : "PE30",
 		"Protocol" : "ap_ctrl_hs",
@@ -1445,8 +1445,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "60", "DependentChan" : "228",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "48", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE30_U0.Systolic_Array_CodEe_U289", "Parent" : "47"},
-	{"ID" : "49", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE30_U0.Systolic_Array_CoeOg_U290", "Parent" : "47"},
+	{"ID" : "48", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE30_U0.Systolic_Array_Cocud_U288", "Parent" : "47"},
+	{"ID" : "49", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE30_U0.Systolic_Array_CodEe_U289", "Parent" : "47"},
 	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE31_U0", "Parent" : "6", "Child" : ["51", "52"],
 		"CDFG" : "PE31",
 		"Protocol" : "ap_ctrl_hs",
@@ -1517,8 +1517,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "63", "DependentChan" : "237",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "51", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE31_U0.Systolic_Array_CodEe_U309", "Parent" : "50"},
-	{"ID" : "52", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE31_U0.Systolic_Array_CoeOg_U310", "Parent" : "50"},
+	{"ID" : "51", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE31_U0.Systolic_Array_Cocud_U308", "Parent" : "50"},
+	{"ID" : "52", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE31_U0.Systolic_Array_CodEe_U309", "Parent" : "50"},
 	{"ID" : "53", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE32_U0", "Parent" : "6", "Child" : ["54", "55"],
 		"CDFG" : "PE32",
 		"Protocol" : "ap_ctrl_hs",
@@ -1598,8 +1598,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_r_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "66", "DependentChan" : "249",
 				"BlockSignal" : [
 					{"Name" : "p_r_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "54", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE32_U0.Systolic_Array_CodEe_U329", "Parent" : "53"},
-	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE32_U0.Systolic_Array_CoeOg_U330", "Parent" : "53"},
+	{"ID" : "54", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE32_U0.Systolic_Array_Cocud_U328", "Parent" : "53"},
+	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE32_U0.Systolic_Array_CodEe_U329", "Parent" : "53"},
 	{"ID" : "56", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE_array_Block_preh_U0", "Parent" : "6",
 		"CDFG" : "PE_array_Block_preh",
 		"Protocol" : "ap_ctrl_hs",
@@ -1614,7 +1614,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "8",
-		"StartFifo" : "start_for_PE_arralbW_U",
+		"StartFifo" : "start_for_PE_arrakbM_U",
 		"Port" : [
 			{"Name" : "row", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "8", "DependentChan" : "83",
 				"BlockSignal" : [
@@ -1692,8 +1692,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_k_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "74", "DependentChan" : "259",
 				"BlockSignal" : [
 					{"Name" : "p_k_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "58", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE33_U0.Systolic_Array_CodEe_U357", "Parent" : "57"},
-	{"ID" : "59", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE33_U0.Systolic_Array_CoeOg_U358", "Parent" : "57"},
+	{"ID" : "58", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE33_U0.Systolic_Array_Cocud_U356", "Parent" : "57"},
+	{"ID" : "59", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE33_U0.Systolic_Array_CodEe_U357", "Parent" : "57"},
 	{"ID" : "60", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE34_U0", "Parent" : "6", "Child" : ["61", "62"],
 		"CDFG" : "PE34",
 		"Protocol" : "ap_ctrl_hs",
@@ -1755,8 +1755,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_k_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "75", "DependentChan" : "265",
 				"BlockSignal" : [
 					{"Name" : "p_k_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "61", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE34_U0.Systolic_Array_CodEe_U374", "Parent" : "60"},
-	{"ID" : "62", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE34_U0.Systolic_Array_CoeOg_U375", "Parent" : "60"},
+	{"ID" : "61", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE34_U0.Systolic_Array_Cocud_U373", "Parent" : "60"},
+	{"ID" : "62", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE34_U0.Systolic_Array_CodEe_U374", "Parent" : "60"},
 	{"ID" : "63", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE35_U0", "Parent" : "6", "Child" : ["64", "65"],
 		"CDFG" : "PE35",
 		"Protocol" : "ap_ctrl_hs",
@@ -1818,8 +1818,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_k_out", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "76", "DependentChan" : "271",
 				"BlockSignal" : [
 					{"Name" : "p_k_out_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "64", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE35_U0.Systolic_Array_CodEe_U391", "Parent" : "63"},
-	{"ID" : "65", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE35_U0.Systolic_Array_CoeOg_U392", "Parent" : "63"},
+	{"ID" : "64", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE35_U0.Systolic_Array_Cocud_U390", "Parent" : "63"},
+	{"ID" : "65", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE35_U0.Systolic_Array_CodEe_U391", "Parent" : "63"},
 	{"ID" : "66", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE36_U0", "Parent" : "6", "Child" : ["67", "68"],
 		"CDFG" : "PE36",
 		"Protocol" : "ap_ctrl_hs",
@@ -1896,8 +1896,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_k_out4", "Type" : "Fifo", "Direction" : "O", "DependentProc" : "77", "DependentChan" : "282",
 				"BlockSignal" : [
 					{"Name" : "p_k_out4_blk_n", "Type" : "RtlSignal"}]}]},
-	{"ID" : "67", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE36_U0.Systolic_Array_CodEe_U408", "Parent" : "66"},
-	{"ID" : "68", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE36_U0.Systolic_Array_CoeOg_U409", "Parent" : "66"},
+	{"ID" : "67", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE36_U0.Systolic_Array_Cocud_U407", "Parent" : "66"},
+	{"ID" : "68", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.PE36_U0.Systolic_Array_CodEe_U408", "Parent" : "66"},
 	{"ID" : "69", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.Write_O_ALL_U0", "Parent" : "6",
 		"CDFG" : "Write_O_ALL",
 		"Protocol" : "ap_ctrl_hs",
@@ -1985,7 +1985,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "27",
-		"StartFifo" : "start_for_Drain_Imb6_U",
+		"StartFifo" : "start_for_Drain_IlbW_U",
 		"Port" : [
 			{"Name" : "In_pre_V4", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "27", "DependentChan" : "153",
 				"BlockSignal" : [
@@ -2013,7 +2013,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "40",
-		"StartFifo" : "start_for_Drain_Incg_U",
+		"StartFifo" : "start_for_Drain_Imb6_U",
 		"Port" : [
 			{"Name" : "In_pre_V19", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "40", "DependentChan" : "196",
 				"BlockSignal" : [
@@ -2041,7 +2041,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "53",
-		"StartFifo" : "start_for_Drain_Iocq_U",
+		"StartFifo" : "start_for_Drain_Incg_U",
 		"Port" : [
 			{"Name" : "In_pre_V214", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "53", "DependentChan" : "239",
 				"BlockSignal" : [
@@ -2069,7 +2069,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "66",
-		"StartFifo" : "start_for_Drain_Isc4_U",
+		"StartFifo" : "start_for_Drain_IrcU_U",
 		"Port" : [
 			{"Name" : "In_pre_V319", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "66", "DependentChan" : "273",
 				"BlockSignal" : [
@@ -2097,7 +2097,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "57",
-		"StartFifo" : "start_for_Drain_WpcA_U",
+		"StartFifo" : "start_for_Drain_Wocq_U",
 		"Port" : [
 			{"Name" : "W_next_V4", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "57", "DependentChan" : "254",
 				"BlockSignal" : [
@@ -2125,7 +2125,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "60",
-		"StartFifo" : "start_for_Drain_WqcK_U",
+		"StartFifo" : "start_for_Drain_WpcA_U",
 		"Port" : [
 			{"Name" : "W_next_V416", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "60", "DependentChan" : "260",
 				"BlockSignal" : [
@@ -2153,7 +2153,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "63",
-		"StartFifo" : "start_for_Drain_WrcU_U",
+		"StartFifo" : "start_for_Drain_WqcK_U",
 		"Port" : [
 			{"Name" : "W_next_V417", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "63", "DependentChan" : "266",
 				"BlockSignal" : [
@@ -2181,7 +2181,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "1",
 		"HasNonBlockingOperation" : "0",
 		"StartSource" : "66",
-		"StartFifo" : "start_for_Drain_Wtde_U",
+		"StartFifo" : "start_for_Drain_Wsc4_U",
 		"Port" : [
 			{"Name" : "W_next_V418", "Type" : "Fifo", "Direction" : "I", "DependentProc" : "66", "DependentChan" : "272",
 				"BlockSignal" : [
@@ -2400,13 +2400,13 @@ set RtlHierarchyInfo {[
 	{"ID" : "280", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.p_chout_c838_U", "Parent" : "6"},
 	{"ID" : "281", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.p_k_c839_U", "Parent" : "6"},
 	{"ID" : "282", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.p_k_c840_U", "Parent" : "6"},
-	{"ID" : "283", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrafYi_U", "Parent" : "6"},
-	{"ID" : "284", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrag8j_U", "Parent" : "6"},
-	{"ID" : "285", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrahbi_U", "Parent" : "6"},
-	{"ID" : "286", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arraibs_U", "Parent" : "6"},
-	{"ID" : "287", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrajbC_U", "Parent" : "6"},
-	{"ID" : "288", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrakbM_U", "Parent" : "6"},
-	{"ID" : "289", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arralbW_U", "Parent" : "6"},
+	{"ID" : "283", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arraeOg_U", "Parent" : "6"},
+	{"ID" : "284", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrafYi_U", "Parent" : "6"},
+	{"ID" : "285", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrag8j_U", "Parent" : "6"},
+	{"ID" : "286", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrahbi_U", "Parent" : "6"},
+	{"ID" : "287", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arraibs_U", "Parent" : "6"},
+	{"ID" : "288", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrajbC_U", "Parent" : "6"},
+	{"ID" : "289", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE_arrakbM_U", "Parent" : "6"},
 	{"ID" : "290", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE25_U0_U", "Parent" : "6"},
 	{"ID" : "291", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE29_U0_U", "Parent" : "6"},
 	{"ID" : "292", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE33_U0_U", "Parent" : "6"},
@@ -2416,27 +2416,27 @@ set RtlHierarchyInfo {[
 	{"ID" : "296", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE26_U0_U", "Parent" : "6"},
 	{"ID" : "297", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE27_U0_U", "Parent" : "6"},
 	{"ID" : "298", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE28_U0_U", "Parent" : "6"},
-	{"ID" : "299", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Imb6_U", "Parent" : "6"},
+	{"ID" : "299", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_IlbW_U", "Parent" : "6"},
 	{"ID" : "300", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE31_U0_U", "Parent" : "6"},
 	{"ID" : "301", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE32_U0_U", "Parent" : "6"},
-	{"ID" : "302", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Incg_U", "Parent" : "6"},
+	{"ID" : "302", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Imb6_U", "Parent" : "6"},
 	{"ID" : "303", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE30_U0_U", "Parent" : "6"},
-	{"ID" : "304", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Iocq_U", "Parent" : "6"},
+	{"ID" : "304", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Incg_U", "Parent" : "6"},
 	{"ID" : "305", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE35_U0_U", "Parent" : "6"},
 	{"ID" : "306", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE36_U0_U", "Parent" : "6"},
 	{"ID" : "307", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_PE34_U0_U", "Parent" : "6"},
-	{"ID" : "308", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_WpcA_U", "Parent" : "6"},
-	{"ID" : "309", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_WqcK_U", "Parent" : "6"},
-	{"ID" : "310", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_WrcU_U", "Parent" : "6"},
-	{"ID" : "311", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Isc4_U", "Parent" : "6"},
-	{"ID" : "312", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Wtde_U", "Parent" : "6"},
+	{"ID" : "308", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Wocq_U", "Parent" : "6"},
+	{"ID" : "309", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_WpcA_U", "Parent" : "6"},
+	{"ID" : "310", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_WqcK_U", "Parent" : "6"},
+	{"ID" : "311", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_IrcU_U", "Parent" : "6"},
+	{"ID" : "312", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_PE_array_fu_246.start_for_Drain_Wsc4_U", "Parent" : "6"},
 	{"ID" : "313", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Read_In_buf_line_fu_275", "Parent" : "0", "Child" : ["314", "315", "316"],
 		"CDFG" : "Read_In_buf_line",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "66", "EstimateLatencyMax" : "7382",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "66", "EstimateLatencyMax" : "1082",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -2459,7 +2459,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_rinp_s", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "314", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_Read_In_buf_line_fu_275.Systolic_Array_Cobkb_U5", "Parent" : "313"},
 	{"ID" : "315", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_Read_In_buf_line_fu_275.Systolic_Array_Cobkb_U6", "Parent" : "313"},
-	{"ID" : "316", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_Read_In_buf_line_fu_275.Systolic_Array_Cocud_U7", "Parent" : "313"},
+	{"ID" : "316", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_Read_In_buf_line_fu_275.Systolic_Array_Cobkb_U7", "Parent" : "313"},
 	{"ID" : "317", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_Write_C_buf_fu_296", "Parent" : "0",
 		"CDFG" : "Write_C_buf",
 		"Protocol" : "ap_ctrl_hs",
@@ -3044,8 +3044,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "163", "Max" : "3758462"}
-	, {"Name" : "Interval", "Min" : "164", "Max" : "3758463"}
+	{"Name" : "Latency", "Min" : "163", "Max" : "3128462"}
+	, {"Name" : "Interval", "Min" : "164", "Max" : "3128463"}
 ]}
 
 set PipelineEnableSignalInfo {[

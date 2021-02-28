@@ -19496,11 +19496,17 @@ void Read_In_buf_line(DATATYPE *In_buf, DATATYPE* In_ddr, int row){
 #pragma HLS LOOP_TRIPCOUNT min=10 max=20
  if(i < _p_/2 || i > _cinp_ - (_p_ + 2) / 2){
     Inner_pad:for(int j = 0; j < _chin_; j++){
+#pragma HLS PIPELINE
+# 246 "conv_v1.cpp"
+
 #pragma HLS LOOP_TRIPCOUNT min=3 max=10
  *(In_buf + (In_buffer_end + i * _chin_ + j) % In_buffer_length) = 0;
     }
    }else{
     Inner_norm:for(int j = 0; j < _chin_; j++){
+#pragma HLS PIPELINE
+# 251 "conv_v1.cpp"
+
 #pragma HLS LOOP_TRIPCOUNT min=3 max=10
  *(In_buf + (In_buffer_end + i * _chin_ + j) % In_buffer_length) = *(In_ddr + row * _cinp_ + i * _chin_ + j);
     }

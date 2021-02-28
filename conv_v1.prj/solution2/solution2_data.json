@@ -35,7 +35,9 @@
       "set_directive_pipeline Read_In_buf_line\/Inner ",
       "set_directive_pipeline Read_In_buf_line\/Inner ",
       "set_directive_pipeline Read_W_buf\/Inner ",
-      "set_directive_pipeline Write_C_buf\/Inner "
+      "set_directive_pipeline Write_C_buf\/Inner ",
+      "set_directive_pipeline Read_In_buf_line\/Inner_pad ",
+      "set_directive_pipeline Read_In_buf_line\/Inner_norm "
     ],
     "DirectiveInfo": [
       "pipeline Systolic_Array_Conv\/Row {} {}",
@@ -52,7 +54,9 @@
       "pipeline Read_In_buf_line\/Inner {} {}",
       "pipeline Read_In_buf_line\/Inner {} {}",
       "pipeline Read_W_buf\/Inner {} {}",
-      "pipeline Write_C_buf\/Inner {} {}"
+      "pipeline Write_C_buf\/Inner {} {}",
+      "pipeline Read_In_buf_line\/Inner_pad {} {}",
+      "pipeline Read_In_buf_line\/Inner_norm {} {}"
     ]
   },
   "Args": {
@@ -226,14 +230,14 @@
       "impl\/vhdl\/PE_array_entry141.vhd",
       "impl\/vhdl\/Read_In_buf_line.vhd",
       "impl\/vhdl\/Read_W_buf.vhd",
+      "impl\/vhdl\/start_for_Drain_IlbW.vhd",
       "impl\/vhdl\/start_for_Drain_Imb6.vhd",
       "impl\/vhdl\/start_for_Drain_Incg.vhd",
-      "impl\/vhdl\/start_for_Drain_Iocq.vhd",
-      "impl\/vhdl\/start_for_Drain_Isc4.vhd",
+      "impl\/vhdl\/start_for_Drain_IrcU.vhd",
+      "impl\/vhdl\/start_for_Drain_Wocq.vhd",
       "impl\/vhdl\/start_for_Drain_WpcA.vhd",
       "impl\/vhdl\/start_for_Drain_WqcK.vhd",
-      "impl\/vhdl\/start_for_Drain_WrcU.vhd",
-      "impl\/vhdl\/start_for_Drain_Wtde.vhd",
+      "impl\/vhdl\/start_for_Drain_Wsc4.vhd",
       "impl\/vhdl\/start_for_PE22_U0.vhd",
       "impl\/vhdl\/start_for_PE23_U0.vhd",
       "impl\/vhdl\/start_for_PE24_U0.vhd",
@@ -249,21 +253,20 @@
       "impl\/vhdl\/start_for_PE34_U0.vhd",
       "impl\/vhdl\/start_for_PE35_U0.vhd",
       "impl\/vhdl\/start_for_PE36_U0.vhd",
+      "impl\/vhdl\/start_for_PE_arraeOg.vhd",
       "impl\/vhdl\/start_for_PE_arrafYi.vhd",
       "impl\/vhdl\/start_for_PE_arrag8j.vhd",
       "impl\/vhdl\/start_for_PE_arrahbi.vhd",
       "impl\/vhdl\/start_for_PE_arraibs.vhd",
       "impl\/vhdl\/start_for_PE_arrajbC.vhd",
       "impl\/vhdl\/start_for_PE_arrakbM.vhd",
-      "impl\/vhdl\/start_for_PE_arralbW.vhd",
       "impl\/vhdl\/Systolic_Array_Cobkb.vhd",
       "impl\/vhdl\/Systolic_Array_Cocud.vhd",
       "impl\/vhdl\/Systolic_Array_CodEe.vhd",
-      "impl\/vhdl\/Systolic_Array_CoeOg.vhd",
       "impl\/vhdl\/Systolic_Array_Conv_AXILiteS_s_axi.vhd",
       "impl\/vhdl\/Systolic_Array_Conv_gmem_m_axi.vhd",
-      "impl\/vhdl\/Systolic_Array_Coudo.vhd",
-      "impl\/vhdl\/Systolic_Array_CowdI.vhd",
+      "impl\/vhdl\/Systolic_Array_Cotde.vhd",
+      "impl\/vhdl\/Systolic_Array_Covdy.vhd",
       "impl\/vhdl\/Write_C_buf.vhd",
       "impl\/vhdl\/Write_O_ALL.vhd",
       "impl\/vhdl\/Systolic_Array_Conv.vhd"
@@ -313,14 +316,14 @@
       "impl\/verilog\/PE_array_entry141.v",
       "impl\/verilog\/Read_In_buf_line.v",
       "impl\/verilog\/Read_W_buf.v",
+      "impl\/verilog\/start_for_Drain_IlbW.v",
       "impl\/verilog\/start_for_Drain_Imb6.v",
       "impl\/verilog\/start_for_Drain_Incg.v",
-      "impl\/verilog\/start_for_Drain_Iocq.v",
-      "impl\/verilog\/start_for_Drain_Isc4.v",
+      "impl\/verilog\/start_for_Drain_IrcU.v",
+      "impl\/verilog\/start_for_Drain_Wocq.v",
       "impl\/verilog\/start_for_Drain_WpcA.v",
       "impl\/verilog\/start_for_Drain_WqcK.v",
-      "impl\/verilog\/start_for_Drain_WrcU.v",
-      "impl\/verilog\/start_for_Drain_Wtde.v",
+      "impl\/verilog\/start_for_Drain_Wsc4.v",
       "impl\/verilog\/start_for_PE22_U0.v",
       "impl\/verilog\/start_for_PE23_U0.v",
       "impl\/verilog\/start_for_PE24_U0.v",
@@ -336,21 +339,20 @@
       "impl\/verilog\/start_for_PE34_U0.v",
       "impl\/verilog\/start_for_PE35_U0.v",
       "impl\/verilog\/start_for_PE36_U0.v",
+      "impl\/verilog\/start_for_PE_arraeOg.v",
       "impl\/verilog\/start_for_PE_arrafYi.v",
       "impl\/verilog\/start_for_PE_arrag8j.v",
       "impl\/verilog\/start_for_PE_arrahbi.v",
       "impl\/verilog\/start_for_PE_arraibs.v",
       "impl\/verilog\/start_for_PE_arrajbC.v",
       "impl\/verilog\/start_for_PE_arrakbM.v",
-      "impl\/verilog\/start_for_PE_arralbW.v",
       "impl\/verilog\/Systolic_Array_Cobkb.v",
       "impl\/verilog\/Systolic_Array_Cocud.v",
       "impl\/verilog\/Systolic_Array_CodEe.v",
-      "impl\/verilog\/Systolic_Array_CoeOg.v",
       "impl\/verilog\/Systolic_Array_Conv_AXILiteS_s_axi.v",
       "impl\/verilog\/Systolic_Array_Conv_gmem_m_axi.v",
-      "impl\/verilog\/Systolic_Array_Coudo.v",
-      "impl\/verilog\/Systolic_Array_CowdI.v",
+      "impl\/verilog\/Systolic_Array_Cotde.v",
+      "impl\/verilog\/Systolic_Array_Covdy.v",
       "impl\/verilog\/Write_C_buf.v",
       "impl\/verilog\/Write_O_ALL.v",
       "impl\/verilog\/Systolic_Array_Conv.v"
@@ -1601,11 +1603,11 @@
       "Read_In_buf_line": {
         "Latency": {
           "LatencyBest": "66",
-          "LatencyAvg": "1729",
-          "LatencyWorst": "7382",
+          "LatencyAvg": "417",
+          "LatencyWorst": "1082",
           "PipelineIIMin": "66",
-          "PipelineIIMax": "7382",
-          "PipelineII": "66 ~ 7382",
+          "PipelineIIMax": "1082",
+          "PipelineII": "66 ~ 1082",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1627,30 +1629,30 @@
           {
             "Name": "Loop 2",
             "TripCount": "",
-            "LatencyMin": "1110",
-            "LatencyMax": "7380",
-            "Latency": "1110 ~ 7380",
+            "LatencyMin": "410",
+            "LatencyMax": "1080",
+            "Latency": "410 ~ 1080",
             "PipelineII": "",
-            "PipelineDepthMin": "111",
-            "PipelineDepthMax": "369",
-            "PipelineDepth": "111 ~ 369",
+            "PipelineDepthMin": "41",
+            "PipelineDepthMax": "54",
+            "PipelineDepth": "41 ~ 54",
             "Loops": [
               {
                 "Name": "Inner_pad",
                 "TripCount": "",
-                "LatencyMin": "108",
-                "LatencyMax": "360",
-                "Latency": "108 ~ 360",
-                "PipelineII": "",
+                "LatencyMin": "37",
+                "LatencyMax": "44",
+                "Latency": "37 ~ 44",
+                "PipelineII": "1",
                 "PipelineDepth": "36"
               },
               {
                 "Name": "Inner_norm",
                 "TripCount": "",
-                "LatencyMin": "108",
-                "LatencyMax": "360",
-                "Latency": "108 ~ 360",
-                "PipelineII": "",
+                "LatencyMin": "37",
+                "LatencyMax": "44",
+                "Latency": "37 ~ 44",
+                "PipelineII": "1",
                 "PipelineDepth": "36"
               }
             ]
@@ -1659,8 +1661,8 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "12",
-          "FF": "3886",
-          "LUT": "4005",
+          "FF": "7735",
+          "LUT": "6845",
           "URAM": "0"
         }
       },
@@ -2979,10 +2981,10 @@
         "Latency": {
           "LatencyBest": "163",
           "LatencyAvg": "",
-          "LatencyWorst": "3758462",
+          "LatencyWorst": "3128462",
           "PipelineIIMin": "164",
-          "PipelineIIMax": "3758463",
-          "PipelineII": "164 ~ 3758463",
+          "PipelineIIMax": "3128463",
+          "PipelineII": "164 ~ 3128463",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -2995,23 +2997,23 @@
             "Name": "Row",
             "TripCount": "",
             "LatencyMin": "141",
-            "LatencyMax": "3758350",
-            "Latency": "141 ~ 3758350",
+            "LatencyMax": "3128350",
+            "Latency": "141 ~ 3128350",
             "PipelineII": "",
             "PipelineDepthMin": "141",
-            "PipelineDepthMax": "375835",
-            "PipelineDepth": "141 ~ 375835",
+            "PipelineDepthMax": "312835",
+            "PipelineDepth": "141 ~ 312835",
             "Loops": [
               {
                 "Name": "Load_Line",
                 "TripCount": "",
                 "LatencyMin": "69",
-                "LatencyMax": "73850",
-                "Latency": "69 ~ 73850",
+                "LatencyMax": "10850",
+                "Latency": "69 ~ 10850",
                 "PipelineII": "",
                 "PipelineDepthMin": "69",
-                "PipelineDepthMax": "7385",
-                "PipelineDepth": "69 ~ 7385"
+                "PipelineDepthMax": "1085",
+                "PipelineDepth": "69 ~ 1085"
               },
               {
                 "Name": "Channel",
@@ -3029,8 +3031,8 @@
         "Area": {
           "BRAM_18K": "8",
           "DSP48E": "392",
-          "FF": "40777",
-          "LUT": "50200",
+          "FF": "44626",
+          "LUT": "53040",
           "URAM": "0"
         }
       }
@@ -3046,7 +3048,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-02-28 11:05:59 CST",
+    "Time": "2021-02-28 21:29:00 CST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.1"
   }

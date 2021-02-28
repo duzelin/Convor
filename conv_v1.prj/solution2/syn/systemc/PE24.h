@@ -11,8 +11,8 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
+#include "Systolic_Array_Cocud.h"
 #include "Systolic_Array_CodEe.h"
-#include "Systolic_Array_CoeOg.h"
 
 namespace ap_rtl {
 
@@ -101,8 +101,8 @@ struct PE24 : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Systolic_Array_CodEe<1,4,32,32,32>* Systolic_Array_CodEe_U153;
-    Systolic_Array_CoeOg<1,2,32,32,32>* Systolic_Array_CoeOg_U154;
+    Systolic_Array_Cocud<1,4,32,32,32>* Systolic_Array_Cocud_U152;
+    Systolic_Array_CodEe<1,2,32,32,32>* Systolic_Array_CodEe_U153;
     sc_signal< sc_logic > real_start;
     sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;

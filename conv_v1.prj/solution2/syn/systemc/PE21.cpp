@@ -38,20 +38,20 @@ const sc_lv<31> PE21::ap_const_lv31_1 = "1";
 const sc_lv<96> PE21::ap_const_lv96_1 = "1";
 
 PE21::PE21(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Systolic_Array_CodEe_U66 = new Systolic_Array_CodEe<1,4,32,32,32>("Systolic_Array_CodEe_U66");
+    Systolic_Array_Cocud_U65 = new Systolic_Array_Cocud<1,4,32,32,32>("Systolic_Array_Cocud_U65");
+    Systolic_Array_Cocud_U65->clk(ap_clk);
+    Systolic_Array_Cocud_U65->reset(ap_rst);
+    Systolic_Array_Cocud_U65->din0(ap_phi_mux_tmp_phi_fu_306_p4);
+    Systolic_Array_Cocud_U65->din1(tmp_4_i_i_reg_461);
+    Systolic_Array_Cocud_U65->ce(grp_fu_314_ce);
+    Systolic_Array_Cocud_U65->dout(grp_fu_314_p2);
+    Systolic_Array_CodEe_U66 = new Systolic_Array_CodEe<1,2,32,32,32>("Systolic_Array_CodEe_U66");
     Systolic_Array_CodEe_U66->clk(ap_clk);
     Systolic_Array_CodEe_U66->reset(ap_rst);
-    Systolic_Array_CodEe_U66->din0(ap_phi_mux_tmp_phi_fu_306_p4);
-    Systolic_Array_CodEe_U66->din1(tmp_4_i_i_reg_461);
-    Systolic_Array_CodEe_U66->ce(grp_fu_314_ce);
-    Systolic_Array_CodEe_U66->dout(grp_fu_314_p2);
-    Systolic_Array_CoeOg_U67 = new Systolic_Array_CoeOg<1,2,32,32,32>("Systolic_Array_CoeOg_U67");
-    Systolic_Array_CoeOg_U67->clk(ap_clk);
-    Systolic_Array_CoeOg_U67->reset(ap_rst);
-    Systolic_Array_CoeOg_U67->din0(tmp_71_reg_456);
-    Systolic_Array_CoeOg_U67->din1(tmp_72_reg_451);
-    Systolic_Array_CoeOg_U67->ce(grp_fu_319_ce);
-    Systolic_Array_CoeOg_U67->dout(grp_fu_319_p2);
+    Systolic_Array_CodEe_U66->din0(tmp_71_reg_456);
+    Systolic_Array_CodEe_U66->din1(tmp_72_reg_451);
+    Systolic_Array_CodEe_U66->ce(grp_fu_319_ce);
+    Systolic_Array_CodEe_U66->dout(grp_fu_319_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -1475,8 +1475,8 @@ PE21::~PE21() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
+    delete Systolic_Array_Cocud_U65;
     delete Systolic_Array_CodEe_U66;
-    delete Systolic_Array_CoeOg_U67;
 }
 
 void PE21::thread_ap_clk_no_reset_() {

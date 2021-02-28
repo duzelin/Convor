@@ -217,10 +217,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "In_buffer_start", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_cin_s", "Type" : "None", "Direction" : "I"},
 			{"Name" : "In_buffer_length", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cocud_U35", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cocud_U36", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cocud_U37", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cocud_U38", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U34", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U35", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U36", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U37", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

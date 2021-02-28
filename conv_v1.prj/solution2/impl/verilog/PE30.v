@@ -266,13 +266,13 @@ initial begin
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
 end
 
-Systolic_Array_CodEe #(
+Systolic_Array_Cocud #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-Systolic_Array_CodEe_U289(
+Systolic_Array_Cocud_U288(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(ap_phi_mux_tmp_phi_fu_252_p4),
@@ -281,13 +281,13 @@ Systolic_Array_CodEe_U289(
     .dout(grp_fu_260_p2)
 );
 
-Systolic_Array_CoeOg #(
+Systolic_Array_CodEe #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-Systolic_Array_CoeOg_U290(
+Systolic_Array_CodEe_U289(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(tmp_35_reg_390),

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Systolic_Array_Conv'" level="0">
-<item name = "Date">Sun Feb 28 11:05:39 2021
+<item name = "Date">Sun Feb 28 21:28:39 2021
 </item>
 <item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
 <item name = "Project">conv_v1.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">163, 3758462, 2.172 us, 50.074 ms, 163, 3758462, none</column>
+<column name="">163, 3128462, 2.172 us, 41.680 ms, 163, 3128462, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,8 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Row">141, 3758350, 141 ~ 375835, -, -, 1 ~ 10, no</column>
-<column name=" + Load_Line">69, 73850, 69 ~ 7385, -, -, 1 ~ 10, no</column>
+<column name="- Row">141, 3128350, 141 ~ 312835, -, -, 1 ~ 10, no</column>
+<column name=" + Load_Line">69, 10850, 69 ~ 1085, -, -, 1 ~ 10, no</column>
 <column name=" + Channel">67, 301180, 67 ~ 30118, -, -, 1 ~ 10, no</column>
 </table>
 </item>

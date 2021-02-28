@@ -420,13 +420,13 @@ initial begin
 #0 ap_enable_reg_pp0_iter17 = 1'b0;
 end
 
-Systolic_Array_Cocud #(
+Systolic_Array_Cobkb #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-Systolic_Array_Cocud_U35(
+Systolic_Array_Cobkb_U34(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_615_p0),
@@ -435,13 +435,13 @@ Systolic_Array_Cocud_U35(
     .dout(grp_fu_615_p2)
 );
 
-Systolic_Array_Cocud #(
+Systolic_Array_Cobkb #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-Systolic_Array_Cocud_U36(
+Systolic_Array_Cobkb_U35(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_636_p0),
@@ -450,13 +450,13 @@ Systolic_Array_Cocud_U36(
     .dout(grp_fu_636_p2)
 );
 
-Systolic_Array_Cocud #(
+Systolic_Array_Cobkb #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-Systolic_Array_Cocud_U37(
+Systolic_Array_Cobkb_U36(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(add_ln43_3_reg_862),
@@ -465,13 +465,13 @@ Systolic_Array_Cocud_U37(
     .dout(grp_fu_684_p2)
 );
 
-Systolic_Array_Cocud #(
+Systolic_Array_Cobkb #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 32 ),
     .dout_WIDTH( 32 ))
-Systolic_Array_Cocud_U38(
+Systolic_Array_Cobkb_U37(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(add_ln43_4_reg_867),

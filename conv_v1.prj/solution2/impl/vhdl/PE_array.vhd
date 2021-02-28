@@ -3549,6 +3549,21 @@ architecture behav of PE_array is
     end component;
 
 
+    component start_for_PE_arraeOg IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
     component start_for_PE_arrafYi IS
     port (
         clk : IN STD_LOGIC;
@@ -3625,21 +3640,6 @@ architecture behav of PE_array is
 
 
     component start_for_PE_arrakbM IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component start_for_PE_arralbW IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -3789,7 +3789,7 @@ architecture behav of PE_array is
     end component;
 
 
-    component start_for_Drain_Imb6 IS
+    component start_for_Drain_IlbW IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -3834,7 +3834,7 @@ architecture behav of PE_array is
     end component;
 
 
-    component start_for_Drain_Incg IS
+    component start_for_Drain_Imb6 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -3864,7 +3864,7 @@ architecture behav of PE_array is
     end component;
 
 
-    component start_for_Drain_Iocq IS
+    component start_for_Drain_Incg IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -3924,6 +3924,21 @@ architecture behav of PE_array is
     end component;
 
 
+    component start_for_Drain_Wocq IS
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        if_read_ce : IN STD_LOGIC;
+        if_write_ce : IN STD_LOGIC;
+        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
+        if_full_n : OUT STD_LOGIC;
+        if_write : IN STD_LOGIC;
+        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
+        if_empty_n : OUT STD_LOGIC;
+        if_read : IN STD_LOGIC );
+    end component;
+
+
     component start_for_Drain_WpcA IS
     port (
         clk : IN STD_LOGIC;
@@ -3954,7 +3969,7 @@ architecture behav of PE_array is
     end component;
 
 
-    component start_for_Drain_WrcU IS
+    component start_for_Drain_IrcU IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -3969,22 +3984,7 @@ architecture behav of PE_array is
     end component;
 
 
-    component start_for_Drain_Isc4 IS
-    port (
-        clk : IN STD_LOGIC;
-        reset : IN STD_LOGIC;
-        if_read_ce : IN STD_LOGIC;
-        if_write_ce : IN STD_LOGIC;
-        if_din : IN STD_LOGIC_VECTOR (0 downto 0);
-        if_full_n : OUT STD_LOGIC;
-        if_write : IN STD_LOGIC;
-        if_dout : OUT STD_LOGIC_VECTOR (0 downto 0);
-        if_empty_n : OUT STD_LOGIC;
-        if_read : IN STD_LOGIC );
-    end component;
-
-
-    component start_for_Drain_Wtde IS
+    component start_for_Drain_Wsc4 IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -8322,7 +8322,7 @@ begin
         if_empty_n => p_k_c840_empty_n,
         if_read => Drain_W44_U0_p_k_s_read);
 
-    start_for_PE_arrafYi_U : component start_for_PE_arrafYi
+    start_for_PE_arraeOg_U : component start_for_PE_arraeOg
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8335,7 +8335,7 @@ begin
         if_empty_n => start_for_PE_array_entry141_U0_empty_n,
         if_read => PE_array_entry141_U0_ap_ready);
 
-    start_for_PE_arrag8j_U : component start_for_PE_arrag8j
+    start_for_PE_arrafYi_U : component start_for_PE_arrafYi
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8348,7 +8348,7 @@ begin
         if_empty_n => start_for_PE_array_Block_preh_5_U0_empty_n,
         if_read => PE_array_Block_preh_5_U0_ap_ready);
 
-    start_for_PE_arrahbi_U : component start_for_PE_arrahbi
+    start_for_PE_arrag8j_U : component start_for_PE_arrag8j
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8361,7 +8361,7 @@ begin
         if_empty_n => start_for_PE_array_Block_preh_4_U0_empty_n,
         if_read => PE_array_Block_preh_4_U0_ap_ready);
 
-    start_for_PE_arraibs_U : component start_for_PE_arraibs
+    start_for_PE_arrahbi_U : component start_for_PE_arrahbi
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8374,7 +8374,7 @@ begin
         if_empty_n => start_for_PE_array_Block_preh_3_U0_empty_n,
         if_read => PE_array_Block_preh_3_U0_ap_ready);
 
-    start_for_PE_arrajbC_U : component start_for_PE_arrajbC
+    start_for_PE_arraibs_U : component start_for_PE_arraibs
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8387,7 +8387,7 @@ begin
         if_empty_n => start_for_PE_array_Block_preh_2_U0_empty_n,
         if_read => PE_array_Block_preh_2_U0_ap_ready);
 
-    start_for_PE_arrakbM_U : component start_for_PE_arrakbM
+    start_for_PE_arrajbC_U : component start_for_PE_arrajbC
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8400,7 +8400,7 @@ begin
         if_empty_n => start_for_PE_array_Block_preh_1_U0_empty_n,
         if_read => PE_array_Block_preh_1_U0_ap_ready);
 
-    start_for_PE_arralbW_U : component start_for_PE_arralbW
+    start_for_PE_arrakbM_U : component start_for_PE_arrakbM
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8530,7 +8530,7 @@ begin
         if_empty_n => start_for_PE28_U0_empty_n,
         if_read => PE28_U0_ap_ready);
 
-    start_for_Drain_Imb6_U : component start_for_Drain_Imb6
+    start_for_Drain_IlbW_U : component start_for_Drain_IlbW
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8569,7 +8569,7 @@ begin
         if_empty_n => start_for_PE32_U0_empty_n,
         if_read => PE32_U0_ap_ready);
 
-    start_for_Drain_Incg_U : component start_for_Drain_Incg
+    start_for_Drain_Imb6_U : component start_for_Drain_Imb6
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8595,7 +8595,7 @@ begin
         if_empty_n => start_for_PE30_U0_empty_n,
         if_read => PE30_U0_ap_ready);
 
-    start_for_Drain_Iocq_U : component start_for_Drain_Iocq
+    start_for_Drain_Incg_U : component start_for_Drain_Incg
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8647,7 +8647,7 @@ begin
         if_empty_n => start_for_PE34_U0_empty_n,
         if_read => PE34_U0_ap_ready);
 
-    start_for_Drain_WpcA_U : component start_for_Drain_WpcA
+    start_for_Drain_Wocq_U : component start_for_Drain_Wocq
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8660,7 +8660,7 @@ begin
         if_empty_n => start_for_Drain_W41_U0_empty_n,
         if_read => Drain_W41_U0_ap_ready);
 
-    start_for_Drain_WqcK_U : component start_for_Drain_WqcK
+    start_for_Drain_WpcA_U : component start_for_Drain_WpcA
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8673,7 +8673,7 @@ begin
         if_empty_n => start_for_Drain_W42_U0_empty_n,
         if_read => Drain_W42_U0_ap_ready);
 
-    start_for_Drain_WrcU_U : component start_for_Drain_WrcU
+    start_for_Drain_WqcK_U : component start_for_Drain_WqcK
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8686,7 +8686,7 @@ begin
         if_empty_n => start_for_Drain_W43_U0_empty_n,
         if_read => Drain_W43_U0_ap_ready);
 
-    start_for_Drain_Isc4_U : component start_for_Drain_Isc4
+    start_for_Drain_IrcU_U : component start_for_Drain_IrcU
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -8699,7 +8699,7 @@ begin
         if_empty_n => start_for_Drain_In40_U0_empty_n,
         if_read => Drain_In40_U0_ap_ready);
 
-    start_for_Drain_Wtde_U : component start_for_Drain_Wtde
+    start_for_Drain_Wsc4_U : component start_for_Drain_Wsc4
     port map (
         clk => ap_clk,
         reset => ap_rst,

@@ -218,7 +218,7 @@ architecture behav of PE36 is
     signal bound4_fu_323_p00 : STD_LOGIC_VECTOR (95 downto 0);
     signal bound4_fu_323_p10 : STD_LOGIC_VECTOR (95 downto 0);
 
-    component Systolic_Array_CodEe IS
+    component Systolic_Array_Cocud IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -235,7 +235,7 @@ architecture behav of PE36 is
     end component;
 
 
-    component Systolic_Array_CoeOg IS
+    component Systolic_Array_CodEe IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -254,7 +254,7 @@ architecture behav of PE36 is
 
 
 begin
-    Systolic_Array_CodEe_U408 : component Systolic_Array_CodEe
+    Systolic_Array_Cocud_U407 : component Systolic_Array_Cocud
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -269,7 +269,7 @@ begin
         ce => grp_fu_280_ce,
         dout => grp_fu_280_p2);
 
-    Systolic_Array_CoeOg_U409 : component Systolic_Array_CoeOg
+    Systolic_Array_CodEe_U408 : component Systolic_Array_CodEe
     generic map (
         ID => 1,
         NUM_STAGE => 2,

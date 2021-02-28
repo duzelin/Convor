@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="Systolic_Array_Conv,hls_ip_2020_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu7ev-ffvc1156-2-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=13.323000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=8,HLS_SYN_DSP=392,HLS_SYN_FF=40777,HLS_SYN_LUT=50200,HLS_VERSION=2020_1}" *)
+(* CORE_GENERATION_INFO="Systolic_Array_Conv,hls_ip_2020_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=1,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu7ev-ffvc1156-2-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=13.323000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=8,HLS_SYN_DSP=392,HLS_SYN_FF=44626,HLS_SYN_LUT=53040,HLS_VERSION=2020_1}" *)
 
 module Systolic_Array_Conv (
         ap_clk,
@@ -692,7 +692,7 @@ Systolic_Array_Conv_gmem_m_axi_U(
     .I_BUSER(gmem_BUSER)
 );
 
-Systolic_Array_Coudo #(
+Systolic_Array_Cotde #(
     .DataWidth( 32 ),
     .AddressRange( 500 ),
     .AddressWidth( 9 ))
@@ -709,7 +709,7 @@ In_buffer_U(
     .q1(In_buffer_q1)
 );
 
-Systolic_Array_Coudo #(
+Systolic_Array_Cotde #(
     .DataWidth( 32 ),
     .AddressRange( 500 ),
     .AddressWidth( 9 ))
@@ -726,7 +726,7 @@ W_buffer_U(
     .q1(W_buffer_q1)
 );
 
-Systolic_Array_CowdI #(
+Systolic_Array_Covdy #(
     .DataWidth( 32 ),
     .AddressRange( 500 ),
     .AddressWidth( 9 ))

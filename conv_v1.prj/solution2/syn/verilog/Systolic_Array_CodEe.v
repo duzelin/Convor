@@ -8,7 +8,7 @@
 module Systolic_Array_CodEe
 #(parameter
     ID         = 66,
-    NUM_STAGE  = 4,
+    NUM_STAGE  = 2,
     din0_WIDTH = 32,
     din1_WIDTH = 32,
     dout_WIDTH = 32
@@ -21,8 +21,6 @@ module Systolic_Array_CodEe
     output wire [dout_WIDTH-1:0] dout
 );
 //------------------------Local signal-------------------
-wire                  aclk;
-wire                  aclken;
 wire                  a_tvalid;
 wire [31:0]           a_tdata;
 wire                  b_tvalid;
@@ -35,9 +33,7 @@ reg                   ce_r;
 wire [dout_WIDTH-1:0] dout_i;
 reg  [dout_WIDTH-1:0] dout_r;
 //------------------------Instantiation------------------
-Systolic_Array_Conv_ap_fadd_2_full_dsp_32 Systolic_Array_Conv_ap_fadd_2_full_dsp_32_u (
-    .aclk                 ( aclk ),
-    .aclken               ( aclken ),
+Systolic_Array_Conv_ap_fmul_0_max_dsp_32 Systolic_Array_Conv_ap_fmul_0_max_dsp_32_u (
     .s_axis_a_tvalid      ( a_tvalid ),
     .s_axis_a_tdata       ( a_tdata ),
     .s_axis_b_tvalid      ( b_tvalid ),
@@ -46,8 +42,6 @@ Systolic_Array_Conv_ap_fadd_2_full_dsp_32 Systolic_Array_Conv_ap_fadd_2_full_dsp
     .m_axis_result_tdata  ( r_tdata )
 );
 //------------------------Body---------------------------
-assign aclk     = clk;
-assign aclken   = ce_r;
 assign a_tvalid = 1'b1;
 assign a_tdata  = din0_buf1;
 assign b_tvalid = 1'b1;

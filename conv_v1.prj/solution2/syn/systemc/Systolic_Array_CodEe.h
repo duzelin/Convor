@@ -4,7 +4,7 @@
 // ==============================================================
 #ifndef __Systolic_Array_CodEe__HH__
 #define __Systolic_Array_CodEe__HH__
-#include "ACMP_fadd.h"
+#include "ACMP_fmul.h"
 #include <systemc>
 
 template<
@@ -23,15 +23,15 @@ SC_MODULE(Systolic_Array_CodEe) {
 
 
 
-    ACMP_fadd<ID, 4, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fadd_U;
+    ACMP_fmul<ID, 2, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fmul_U;
 
-    SC_CTOR(Systolic_Array_CodEe):  ACMP_fadd_U ("ACMP_fadd_U") {
-        ACMP_fadd_U.clk(clk);
-        ACMP_fadd_U.reset(reset);
-        ACMP_fadd_U.ce(ce);
-        ACMP_fadd_U.din0(din0);
-        ACMP_fadd_U.din1(din1);
-        ACMP_fadd_U.dout(dout);
+    SC_CTOR(Systolic_Array_CodEe):  ACMP_fmul_U ("ACMP_fmul_U") {
+        ACMP_fmul_U.clk(clk);
+        ACMP_fmul_U.reset(reset);
+        ACMP_fmul_U.ce(ce);
+        ACMP_fmul_U.din0(din0);
+        ACMP_fmul_U.din1(din1);
+        ACMP_fmul_U.dout(dout);
 
     }
 

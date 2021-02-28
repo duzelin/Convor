@@ -170,7 +170,7 @@ Systolic_Array_Conv::Systolic_Array_Conv(sc_module_name name) : sc_module(name),
     Systolic_Array_Conv_gmem_m_axi_U->I_BRESP(gmem_BRESP);
     Systolic_Array_Conv_gmem_m_axi_U->I_BID(gmem_BID);
     Systolic_Array_Conv_gmem_m_axi_U->I_BUSER(gmem_BUSER);
-    In_buffer_U = new Systolic_Array_Coudo("In_buffer_U");
+    In_buffer_U = new Systolic_Array_Cotde("In_buffer_U");
     In_buffer_U->clk(ap_clk);
     In_buffer_U->reset(ap_rst_n_inv);
     In_buffer_U->address0(In_buffer_address0);
@@ -181,7 +181,7 @@ Systolic_Array_Conv::Systolic_Array_Conv(sc_module_name name) : sc_module(name),
     In_buffer_U->address1(grp_PE_array_fu_246_In_buf_address1);
     In_buffer_U->ce1(In_buffer_ce1);
     In_buffer_U->q1(In_buffer_q1);
-    W_buffer_U = new Systolic_Array_Coudo("W_buffer_U");
+    W_buffer_U = new Systolic_Array_Cotde("W_buffer_U");
     W_buffer_U->clk(ap_clk);
     W_buffer_U->reset(ap_rst_n_inv);
     W_buffer_U->address0(W_buffer_address0);
@@ -192,7 +192,7 @@ Systolic_Array_Conv::Systolic_Array_Conv(sc_module_name name) : sc_module(name),
     W_buffer_U->address1(grp_PE_array_fu_246_W_buf_address1);
     W_buffer_U->ce1(W_buffer_ce1);
     W_buffer_U->q1(W_buffer_q1);
-    Out_buffer_U = new Systolic_Array_CowdI("Out_buffer_U");
+    Out_buffer_U = new Systolic_Array_Covdy("Out_buffer_U");
     Out_buffer_U->clk(ap_clk);
     Out_buffer_U->reset(ap_rst_n_inv);
     Out_buffer_U->address0(Out_buffer_address0);

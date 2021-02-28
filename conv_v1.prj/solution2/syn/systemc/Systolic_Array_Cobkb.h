@@ -4,7 +4,7 @@
 // ==============================================================
 #ifndef __Systolic_Array_Cobkb__HH__
 #define __Systolic_Array_Cobkb__HH__
-#include "ACMP_srem_seq.h"
+#include "ACMP_srem.h"
 #include <systemc>
 
 template<
@@ -17,25 +17,21 @@ SC_MODULE(Systolic_Array_Cobkb) {
     sc_core::sc_in_clk clk;
     sc_core::sc_in<sc_dt::sc_logic> reset;
     sc_core::sc_in<sc_dt::sc_logic> ce;
-    sc_core::sc_in< sc_dt::sc_logic >   start;
-    sc_core::sc_out< sc_dt::sc_logic >   done;
     sc_core::sc_in< sc_dt::sc_lv<din0_WIDTH> >   din0;
     sc_core::sc_in< sc_dt::sc_lv<din1_WIDTH> >   din1;
     sc_core::sc_out< sc_dt::sc_lv<dout_WIDTH> >   dout;
 
 
 
-    ACMP_srem_seq<ID, 36, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_srem_seq_U;
+    ACMP_srem<ID, 36, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_srem_U;
 
-    SC_CTOR(Systolic_Array_Cobkb):  ACMP_srem_seq_U ("ACMP_srem_seq_U") {
-        ACMP_srem_seq_U.clk(clk);
-        ACMP_srem_seq_U.reset(reset);
-        ACMP_srem_seq_U.ce(ce);
-        ACMP_srem_seq_U.din0(din0);
-        ACMP_srem_seq_U.din1(din1);
-        ACMP_srem_seq_U.dout(dout);
-        ACMP_srem_seq_U.start(start);
-        ACMP_srem_seq_U.done(done);
+    SC_CTOR(Systolic_Array_Cobkb):  ACMP_srem_U ("ACMP_srem_U") {
+        ACMP_srem_U.clk(clk);
+        ACMP_srem_U.reset(reset);
+        ACMP_srem_U.ce(ce);
+        ACMP_srem_U.din0(din0);
+        ACMP_srem_U.din1(din1);
+        ACMP_srem_U.dout(dout);
 
     }
 

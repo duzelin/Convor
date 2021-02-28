@@ -6,7 +6,7 @@
 open_project conv_v1.prj
 set_top Systolic_Array_Conv
 add_files conv_v1.cpp
-add_files -tb conv_test.cpp
+add_files -tb conv_test.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution2"
 set_part {xczu7ev-ffvc1156-2-e}
 create_clock -period 10 -name default

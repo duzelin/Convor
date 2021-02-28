@@ -19496,11 +19496,17 @@ _ssdm_op_SpecLoopTripCount(3, 10, 6, "");
 _ssdm_op_SpecLoopTripCount(10, 20, 15, "");
  if(i < _p_/2 || i > _cinp_ - (_p_ + 2) / 2){
     Inner_pad:for(int j = 0; j < _chin_; j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 246 "conv_v1.cpp"
+
 _ssdm_op_SpecLoopTripCount(3, 10, 6, "");
  *(In_buf + (In_buffer_end + i * _chin_ + j) % In_buffer_length) = 0;
     }
    }else{
     Inner_norm:for(int j = 0; j < _chin_; j++){
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 251 "conv_v1.cpp"
+
 _ssdm_op_SpecLoopTripCount(3, 10, 6, "");
  *(In_buf + (In_buffer_end + i * _chin_ + j) % In_buffer_length) = *(In_ddr + row * _cinp_ + i * _chin_ + j);
     }

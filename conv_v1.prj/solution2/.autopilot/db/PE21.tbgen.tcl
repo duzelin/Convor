@@ -314,8 +314,8 @@ set RtlHierarchyInfo {[
 					{"Name" : "p_r_out6_blk_n", "Type" : "RtlSignal"}]},
 			{"Name" : "p_chout_s", "Type" : "None", "Direction" : "I"},
 			{"Name" : "p_r_s", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_CodEe_U66", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_CoeOg_U67", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cocud_U65", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_CodEe_U66", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

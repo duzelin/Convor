@@ -4,7 +4,7 @@
 // ==============================================================
 #ifndef __Systolic_Array_Cocud__HH__
 #define __Systolic_Array_Cocud__HH__
-#include "ACMP_srem.h"
+#include "ACMP_fadd.h"
 #include <systemc>
 
 template<
@@ -23,15 +23,15 @@ SC_MODULE(Systolic_Array_Cocud) {
 
 
 
-    ACMP_srem<ID, 36, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_srem_U;
+    ACMP_fadd<ID, 4, din0_WIDTH, din1_WIDTH, dout_WIDTH> ACMP_fadd_U;
 
-    SC_CTOR(Systolic_Array_Cocud):  ACMP_srem_U ("ACMP_srem_U") {
-        ACMP_srem_U.clk(clk);
-        ACMP_srem_U.reset(reset);
-        ACMP_srem_U.ce(ce);
-        ACMP_srem_U.din0(din0);
-        ACMP_srem_U.din1(din1);
-        ACMP_srem_U.dout(dout);
+    SC_CTOR(Systolic_Array_Cocud):  ACMP_fadd_U ("ACMP_fadd_U") {
+        ACMP_fadd_U.clk(clk);
+        ACMP_fadd_U.reset(reset);
+        ACMP_fadd_U.ce(ce);
+        ACMP_fadd_U.din0(din0);
+        ACMP_fadd_U.din1(din1);
+        ACMP_fadd_U.dout(dout);
 
     }
 

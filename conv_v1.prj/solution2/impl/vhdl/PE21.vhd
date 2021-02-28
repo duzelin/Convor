@@ -226,7 +226,7 @@ architecture behav of PE21 is
     signal bound4_fu_369_p00 : STD_LOGIC_VECTOR (95 downto 0);
     signal bound4_fu_369_p10 : STD_LOGIC_VECTOR (95 downto 0);
 
-    component Systolic_Array_CodEe IS
+    component Systolic_Array_Cocud IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -243,7 +243,7 @@ architecture behav of PE21 is
     end component;
 
 
-    component Systolic_Array_CoeOg IS
+    component Systolic_Array_CodEe IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -262,7 +262,7 @@ architecture behav of PE21 is
 
 
 begin
-    Systolic_Array_CodEe_U66 : component Systolic_Array_CodEe
+    Systolic_Array_Cocud_U65 : component Systolic_Array_Cocud
     generic map (
         ID => 1,
         NUM_STAGE => 4,
@@ -277,7 +277,7 @@ begin
         ce => grp_fu_314_ce,
         dout => grp_fu_314_p2);
 
-    Systolic_Array_CoeOg_U67 : component Systolic_Array_CoeOg
+    Systolic_Array_CodEe_U66 : component Systolic_Array_CodEe
     generic map (
         ID => 1,
         NUM_STAGE => 2,

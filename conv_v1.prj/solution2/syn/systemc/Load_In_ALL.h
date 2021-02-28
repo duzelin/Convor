@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "Systolic_Array_Cocud.h"
+#include "Systolic_Array_Cobkb.h"
 
 namespace ap_rtl {
 
@@ -80,10 +80,10 @@ struct Load_In_ALL : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    Systolic_Array_Cocud<1,36,32,32,32>* Systolic_Array_Cocud_U35;
-    Systolic_Array_Cocud<1,36,32,32,32>* Systolic_Array_Cocud_U36;
-    Systolic_Array_Cocud<1,36,32,32,32>* Systolic_Array_Cocud_U37;
-    Systolic_Array_Cocud<1,36,32,32,32>* Systolic_Array_Cocud_U38;
+    Systolic_Array_Cobkb<1,36,32,32,32>* Systolic_Array_Cobkb_U34;
+    Systolic_Array_Cobkb<1,36,32,32,32>* Systolic_Array_Cobkb_U35;
+    Systolic_Array_Cobkb<1,36,32,32,32>* Systolic_Array_Cobkb_U36;
+    Systolic_Array_Cobkb<1,36,32,32,32>* Systolic_Array_Cobkb_U37;
     sc_signal< sc_logic > real_start;
     sc_signal< sc_logic > start_once_reg;
     sc_signal< sc_logic > ap_done_reg;

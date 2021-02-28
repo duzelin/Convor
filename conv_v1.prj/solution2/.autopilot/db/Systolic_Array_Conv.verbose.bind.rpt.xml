@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'Systolic_Array_Conv'" level="0">
-<item name = "Date">Sun Feb 28 11:05:40 2021
+<item name = "Date">Sun Feb 28 21:28:40 2021
 </item>
 <item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
 <item name = "Project">conv_v1.prj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">163, 3758462, 2.172 us, 50.074 ms, 163, 3758462, none</column>
+<column name="">163, 3128462, 2.172 us, 41.680 ms, 163, 3128462, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,15 +32,15 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_PE_array_fu_246">PE_array, 64, 30115, 0.853 us, 0.401 ms, 42, 30073, dataflow</column>
-<column name="grp_Read_In_buf_line_fu_275">Read_In_buf_line, 66, 7382, 0.879 us, 98.350 us, 66, 7382, none</column>
+<column name="grp_Read_In_buf_line_fu_275">Read_In_buf_line, 66, 1082, 0.879 us, 14.415 us, 66, 1082, none</column>
 <column name="grp_Write_C_buf_fu_296">Write_C_buf, 1, 801, 13.323 ns, 10.672 us, 1, 801, none</column>
 <column name="grp_Read_W_buf_fu_311">Read_W_buf, 19, 109, 0.253 us, 1.452 us, 19, 109, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Row">141, 3758350, 141 ~ 375835, -, -, 1 ~ 10, no</column>
-<column name=" + Load_Line">69, 73850, 69 ~ 7385, -, -, 1 ~ 10, no</column>
+<column name="- Row">141, 3128350, 141 ~ 312835, -, -, 1 ~ 10, no</column>
+<column name=" + Load_Line">69, 10850, 69 ~ 1085, -, -, 1 ~ 10, no</column>
 <column name=" + Channel">67, 301180, 67 ~ 30118, -, -, 1 ~ 10, no</column>
 </table>
 </item>

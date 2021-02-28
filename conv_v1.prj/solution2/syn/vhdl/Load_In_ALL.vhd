@@ -352,7 +352,7 @@ architecture behav of Load_In_ALL is
     signal bound4_fu_312_p10 : STD_LOGIC_VECTOR (95 downto 0);
     signal mul_ln42_fu_476_p00 : STD_LOGIC_VECTOR (31 downto 0);
 
-    component Systolic_Array_Cocud IS
+    component Systolic_Array_Cobkb IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -371,7 +371,7 @@ architecture behav of Load_In_ALL is
 
 
 begin
-    Systolic_Array_Cocud_U35 : component Systolic_Array_Cocud
+    Systolic_Array_Cobkb_U34 : component Systolic_Array_Cobkb
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -386,7 +386,7 @@ begin
         ce => grp_fu_615_ce,
         dout => grp_fu_615_p2);
 
-    Systolic_Array_Cocud_U36 : component Systolic_Array_Cocud
+    Systolic_Array_Cobkb_U35 : component Systolic_Array_Cobkb
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -401,7 +401,7 @@ begin
         ce => grp_fu_636_ce,
         dout => grp_fu_636_p2);
 
-    Systolic_Array_Cocud_U37 : component Systolic_Array_Cocud
+    Systolic_Array_Cobkb_U36 : component Systolic_Array_Cobkb
     generic map (
         ID => 1,
         NUM_STAGE => 36,
@@ -416,7 +416,7 @@ begin
         ce => grp_fu_684_ce,
         dout => grp_fu_684_p2);
 
-    Systolic_Array_Cocud_U38 : component Systolic_Array_Cocud
+    Systolic_Array_Cobkb_U37 : component Systolic_Array_Cobkb
     generic map (
         ID => 1,
         NUM_STAGE => 36,

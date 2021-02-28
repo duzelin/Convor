@@ -90,6 +90,18 @@
           "label": "Inner",
           "functionLabel": "",
           "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "Read_In_buf_line",
+          "label": "Inner_pad",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "Read_In_buf_line",
+          "label": "Inner_norm",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
         }
       ]
     }]}

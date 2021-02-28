@@ -38,34 +38,34 @@ const sc_lv<96> Load_In_ALL::ap_const_lv96_1 = "1";
 const sc_lv<32> Load_In_ALL::ap_const_lv32_4 = "100";
 
 Load_In_ALL::Load_In_ALL(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Systolic_Array_Cocud_U35 = new Systolic_Array_Cocud<1,36,32,32,32>("Systolic_Array_Cocud_U35");
-    Systolic_Array_Cocud_U35->clk(ap_clk);
-    Systolic_Array_Cocud_U35->reset(ap_rst);
-    Systolic_Array_Cocud_U35->din0(grp_fu_615_p0);
-    Systolic_Array_Cocud_U35->din1(In_buffer_length);
-    Systolic_Array_Cocud_U35->ce(grp_fu_615_ce);
-    Systolic_Array_Cocud_U35->dout(grp_fu_615_p2);
-    Systolic_Array_Cocud_U36 = new Systolic_Array_Cocud<1,36,32,32,32>("Systolic_Array_Cocud_U36");
-    Systolic_Array_Cocud_U36->clk(ap_clk);
-    Systolic_Array_Cocud_U36->reset(ap_rst);
-    Systolic_Array_Cocud_U36->din0(grp_fu_636_p0);
-    Systolic_Array_Cocud_U36->din1(In_buffer_length);
-    Systolic_Array_Cocud_U36->ce(grp_fu_636_ce);
-    Systolic_Array_Cocud_U36->dout(grp_fu_636_p2);
-    Systolic_Array_Cocud_U37 = new Systolic_Array_Cocud<1,36,32,32,32>("Systolic_Array_Cocud_U37");
-    Systolic_Array_Cocud_U37->clk(ap_clk);
-    Systolic_Array_Cocud_U37->reset(ap_rst);
-    Systolic_Array_Cocud_U37->din0(add_ln43_3_reg_862);
-    Systolic_Array_Cocud_U37->din1(In_buffer_length_loa_reg_849);
-    Systolic_Array_Cocud_U37->ce(grp_fu_684_ce);
-    Systolic_Array_Cocud_U37->dout(grp_fu_684_p2);
-    Systolic_Array_Cocud_U38 = new Systolic_Array_Cocud<1,36,32,32,32>("Systolic_Array_Cocud_U38");
-    Systolic_Array_Cocud_U38->clk(ap_clk);
-    Systolic_Array_Cocud_U38->reset(ap_rst);
-    Systolic_Array_Cocud_U38->din0(add_ln43_4_reg_867);
-    Systolic_Array_Cocud_U38->din1(In_buffer_length_loa_reg_849);
-    Systolic_Array_Cocud_U38->ce(grp_fu_688_ce);
-    Systolic_Array_Cocud_U38->dout(grp_fu_688_p2);
+    Systolic_Array_Cobkb_U34 = new Systolic_Array_Cobkb<1,36,32,32,32>("Systolic_Array_Cobkb_U34");
+    Systolic_Array_Cobkb_U34->clk(ap_clk);
+    Systolic_Array_Cobkb_U34->reset(ap_rst);
+    Systolic_Array_Cobkb_U34->din0(grp_fu_615_p0);
+    Systolic_Array_Cobkb_U34->din1(In_buffer_length);
+    Systolic_Array_Cobkb_U34->ce(grp_fu_615_ce);
+    Systolic_Array_Cobkb_U34->dout(grp_fu_615_p2);
+    Systolic_Array_Cobkb_U35 = new Systolic_Array_Cobkb<1,36,32,32,32>("Systolic_Array_Cobkb_U35");
+    Systolic_Array_Cobkb_U35->clk(ap_clk);
+    Systolic_Array_Cobkb_U35->reset(ap_rst);
+    Systolic_Array_Cobkb_U35->din0(grp_fu_636_p0);
+    Systolic_Array_Cobkb_U35->din1(In_buffer_length);
+    Systolic_Array_Cobkb_U35->ce(grp_fu_636_ce);
+    Systolic_Array_Cobkb_U35->dout(grp_fu_636_p2);
+    Systolic_Array_Cobkb_U36 = new Systolic_Array_Cobkb<1,36,32,32,32>("Systolic_Array_Cobkb_U36");
+    Systolic_Array_Cobkb_U36->clk(ap_clk);
+    Systolic_Array_Cobkb_U36->reset(ap_rst);
+    Systolic_Array_Cobkb_U36->din0(add_ln43_3_reg_862);
+    Systolic_Array_Cobkb_U36->din1(In_buffer_length_loa_reg_849);
+    Systolic_Array_Cobkb_U36->ce(grp_fu_684_ce);
+    Systolic_Array_Cobkb_U36->dout(grp_fu_684_p2);
+    Systolic_Array_Cobkb_U37 = new Systolic_Array_Cobkb<1,36,32,32,32>("Systolic_Array_Cobkb_U37");
+    Systolic_Array_Cobkb_U37->clk(ap_clk);
+    Systolic_Array_Cobkb_U37->reset(ap_rst);
+    Systolic_Array_Cobkb_U37->din0(add_ln43_4_reg_867);
+    Systolic_Array_Cobkb_U37->din1(In_buffer_length_loa_reg_849);
+    Systolic_Array_Cobkb_U37->ce(grp_fu_688_ce);
+    Systolic_Array_Cobkb_U37->dout(grp_fu_688_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -1368,10 +1368,10 @@ Load_In_ALL::~Load_In_ALL() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete Systolic_Array_Cocud_U35;
-    delete Systolic_Array_Cocud_U36;
-    delete Systolic_Array_Cocud_U37;
-    delete Systolic_Array_Cocud_U38;
+    delete Systolic_Array_Cobkb_U34;
+    delete Systolic_Array_Cobkb_U35;
+    delete Systolic_Array_Cobkb_U36;
+    delete Systolic_Array_Cobkb_U37;
 }
 
 void Load_In_ALL::thread_ap_clk_no_reset_() {

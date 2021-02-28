@@ -175,7 +175,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "66", "EstimateLatencyMax" : "7382",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "66", "EstimateLatencyMax" : "1082",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -198,7 +198,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_rinp_s", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U5", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U6", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cocud_U7", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Systolic_Array_Cobkb_U7", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -217,12 +217,14 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "66", "Max" : "7382"}
-	, {"Name" : "Interval", "Min" : "66", "Max" : "7382"}
+	{"Name" : "Latency", "Min" : "66", "Max" : "1082"}
+	, {"Name" : "Interval", "Min" : "66", "Max" : "1082"}
 ]}
 
 set PipelineEnableSignalInfo {[
 	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
+	{"Pipeline" : "1", "EnableSignal" : "ap_enable_pp1"}
+	{"Pipeline" : "2", "EnableSignal" : "ap_enable_pp2"}
 ]}
 
 set Spec2ImplPortList { 

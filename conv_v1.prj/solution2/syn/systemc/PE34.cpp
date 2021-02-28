@@ -38,20 +38,20 @@ const sc_lv<31> PE34::ap_const_lv31_1 = "1";
 const sc_lv<96> PE34::ap_const_lv96_1 = "1";
 
 PE34::PE34(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Systolic_Array_CodEe_U374 = new Systolic_Array_CodEe<1,4,32,32,32>("Systolic_Array_CodEe_U374");
+    Systolic_Array_Cocud_U373 = new Systolic_Array_Cocud<1,4,32,32,32>("Systolic_Array_Cocud_U373");
+    Systolic_Array_Cocud_U373->clk(ap_clk);
+    Systolic_Array_Cocud_U373->reset(ap_rst);
+    Systolic_Array_Cocud_U373->din0(ap_phi_mux_tmp_19_phi_fu_222_p4);
+    Systolic_Array_Cocud_U373->din1(tmp_4_i_i_i_reg_365);
+    Systolic_Array_Cocud_U373->ce(grp_fu_230_ce);
+    Systolic_Array_Cocud_U373->dout(grp_fu_230_p2);
+    Systolic_Array_CodEe_U374 = new Systolic_Array_CodEe<1,2,32,32,32>("Systolic_Array_CodEe_U374");
     Systolic_Array_CodEe_U374->clk(ap_clk);
     Systolic_Array_CodEe_U374->reset(ap_rst);
-    Systolic_Array_CodEe_U374->din0(ap_phi_mux_tmp_19_phi_fu_222_p4);
-    Systolic_Array_CodEe_U374->din1(tmp_4_i_i_i_reg_365);
-    Systolic_Array_CodEe_U374->ce(grp_fu_230_ce);
-    Systolic_Array_CodEe_U374->dout(grp_fu_230_p2);
-    Systolic_Array_CoeOg_U375 = new Systolic_Array_CoeOg<1,2,32,32,32>("Systolic_Array_CoeOg_U375");
-    Systolic_Array_CoeOg_U375->clk(ap_clk);
-    Systolic_Array_CoeOg_U375->reset(ap_rst);
-    Systolic_Array_CoeOg_U375->din0(tmp_reg_360);
-    Systolic_Array_CoeOg_U375->din1(tmp_20_reg_355);
-    Systolic_Array_CoeOg_U375->ce(grp_fu_235_ce);
-    Systolic_Array_CoeOg_U375->dout(grp_fu_235_p2);
+    Systolic_Array_CodEe_U374->din0(tmp_reg_360);
+    Systolic_Array_CodEe_U374->din1(tmp_20_reg_355);
+    Systolic_Array_CodEe_U374->ce(grp_fu_235_ce);
+    Systolic_Array_CodEe_U374->dout(grp_fu_235_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -855,8 +855,8 @@ PE34::~PE34() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
+    delete Systolic_Array_Cocud_U373;
     delete Systolic_Array_CodEe_U374;
-    delete Systolic_Array_CoeOg_U375;
 }
 
 void PE34::thread_ap_clk_no_reset_() {

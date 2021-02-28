@@ -2657,7 +2657,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Systolic_Array_CoeOg_U409</rtlName>
+              <rtlName>Systolic_Array_CodEe_U408</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -2713,7 +2713,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>O_temp</originalName>
-              <rtlName>Systolic_Array_CodEe_U408</rtlName>
+              <rtlName>Systolic_Array_Cocud_U407</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -4950,7 +4950,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>Systolic_Array_CodEe_U408 (Systolic_Array_CodEe)</first>
+          <first>Systolic_Array_Cocud_U407 (Systolic_Array_Cocud)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>3</count>
             <item_version>0</item_version>
@@ -4969,7 +4969,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_CoeOg_U409 (Systolic_Array_CoeOg)</first>
+          <first>Systolic_Array_CodEe_U408 (Systolic_Array_CodEe)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -6393,14 +6393,14 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>Systolic_Array_CodEe_U408</first>
+          <first>Systolic_Array_Cocud_U407</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>Systolic_Array_CoeOg_U409</first>
+          <first>Systolic_Array_CodEe_U408</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -6411,7 +6411,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>Systolic_Array_CodEe_U408 (Systolic_Array_CodEe)</first>
+          <first>Systolic_Array_Cocud_U407 (Systolic_Array_Cocud)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -6419,7 +6419,7 @@
           </second>
         </item>
         <item>
-          <first>Systolic_Array_CoeOg_U409 (Systolic_Array_CoeOg)</first>
+          <first>Systolic_Array_CodEe_U408 (Systolic_Array_CodEe)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

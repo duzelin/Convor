@@ -38,20 +38,20 @@ const sc_lv<31> PE22::ap_const_lv31_1 = "1";
 const sc_lv<96> PE22::ap_const_lv96_1 = "1";
 
 PE22::PE22(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    Systolic_Array_CodEe_U97 = new Systolic_Array_CodEe<1,4,32,32,32>("Systolic_Array_CodEe_U97");
+    Systolic_Array_Cocud_U96 = new Systolic_Array_Cocud<1,4,32,32,32>("Systolic_Array_Cocud_U96");
+    Systolic_Array_Cocud_U96->clk(ap_clk);
+    Systolic_Array_Cocud_U96->reset(ap_rst);
+    Systolic_Array_Cocud_U96->din0(ap_phi_mux_tmp_phi_fu_312_p4);
+    Systolic_Array_Cocud_U96->din1(tmp_4_i_i_i_reg_455);
+    Systolic_Array_Cocud_U96->ce(grp_fu_320_ce);
+    Systolic_Array_Cocud_U96->dout(grp_fu_320_p2);
+    Systolic_Array_CodEe_U97 = new Systolic_Array_CodEe<1,2,32,32,32>("Systolic_Array_CodEe_U97");
     Systolic_Array_CodEe_U97->clk(ap_clk);
     Systolic_Array_CodEe_U97->reset(ap_rst);
-    Systolic_Array_CodEe_U97->din0(ap_phi_mux_tmp_phi_fu_312_p4);
-    Systolic_Array_CodEe_U97->din1(tmp_4_i_i_i_reg_455);
-    Systolic_Array_CodEe_U97->ce(grp_fu_320_ce);
-    Systolic_Array_CodEe_U97->dout(grp_fu_320_p2);
-    Systolic_Array_CoeOg_U98 = new Systolic_Array_CoeOg<1,2,32,32,32>("Systolic_Array_CoeOg_U98");
-    Systolic_Array_CoeOg_U98->clk(ap_clk);
-    Systolic_Array_CoeOg_U98->reset(ap_rst);
-    Systolic_Array_CoeOg_U98->din0(tmp_67_reg_450);
-    Systolic_Array_CoeOg_U98->din1(tmp_68_reg_445);
-    Systolic_Array_CoeOg_U98->ce(grp_fu_325_ce);
-    Systolic_Array_CoeOg_U98->dout(grp_fu_325_p2);
+    Systolic_Array_CodEe_U97->din0(tmp_67_reg_450);
+    Systolic_Array_CodEe_U97->din1(tmp_68_reg_445);
+    Systolic_Array_CodEe_U97->ce(grp_fu_325_ce);
+    Systolic_Array_CodEe_U97->dout(grp_fu_325_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -1539,8 +1539,8 @@ PE22::~PE22() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
+    delete Systolic_Array_Cocud_U96;
     delete Systolic_Array_CodEe_U97;
-    delete Systolic_Array_CoeOg_U98;
 }
 
 void PE22::thread_ap_clk_no_reset_() {
