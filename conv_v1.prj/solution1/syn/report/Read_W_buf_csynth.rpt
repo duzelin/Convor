@@ -1,0 +1,187 @@
+
+
+================================================================
+== Vivado HLS Report for 'Read_W_buf'
+================================================================
+* Date:           Sun Feb 28 10:35:31 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        conv_v1.prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 8.750 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       27|      207| 0.270 us | 2.070 us |   27|  207|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+----------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- Loop 1  |       20|      200|         2|          -|          -| 10 ~ 100 |    no    |
+        +----------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      60|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      74|    -|
+|Register         |        -|      -|     134|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|     134|     134|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      624|   1728|  460800|  230400|   96|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |i_fu_120_p2           |     +    |      0|  0|  38|          31|           1|
+    |ap_block_state8       |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln274_fu_115_p2  |   icmp   |      0|  0|  20|          32|          32|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0|  60|          64|          34|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------+----+-----------+-----+-----------+
+    |      Name      | LUT| Input Size| Bits| Total Bits|
+    +----------------+----+-----------+-----+-----------+
+    |W_ddr_blk_n_AR  |   9|          2|    1|          2|
+    |W_ddr_blk_n_R   |   9|          2|    1|          2|
+    |ap_NS_fsm       |  47|         10|    1|         10|
+    |p_0_rec_reg_85  |   9|          2|   31|         62|
+    +----------------+----+-----------+-----+-----------+
+    |Total           |  74|         16|   34|         76|
+    +----------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |W_ddr_addr_read_reg_151  |  32|   0|   32|          0|
+    |ap_CS_fsm                |   9|   0|    9|          0|
+    |i_reg_146                |  31|   0|   31|          0|
+    |p_0_rec_cast_reg_138     |  31|   0|   64|         33|
+    |p_0_rec_reg_85           |  31|   0|   31|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 134|   0|  167|         33|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs |  Read_W_buf  | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |  Read_W_buf  | return value |
+|ap_start              |  in |    1| ap_ctrl_hs |  Read_W_buf  | return value |
+|ap_done               | out |    1| ap_ctrl_hs |  Read_W_buf  | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |  Read_W_buf  | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |  Read_W_buf  | return value |
+|W_address0            | out |    9|  ap_memory |       W      |     array    |
+|W_ce0                 | out |    1|  ap_memory |       W      |     array    |
+|W_we0                 | out |    1|  ap_memory |       W      |     array    |
+|W_d0                  | out |   32|  ap_memory |       W      |     array    |
+|m_axi_W_ddr_AWVALID   | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWREADY   |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWADDR    | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWID      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWLEN     | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWSIZE    | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWBURST   | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWLOCK    | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWCACHE   | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWPROT    | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWQOS     | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWREGION  | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_AWUSER    | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WVALID    | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WREADY    |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WDATA     | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WSTRB     | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WLAST     | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WID       | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_WUSER     | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARVALID   | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARREADY   |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARADDR    | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARID      | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARLEN     | out |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARSIZE    | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARBURST   | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARLOCK    | out |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARCACHE   | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARPROT    | out |    3|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARQOS     | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARREGION  | out |    4|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_ARUSER    | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RVALID    |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RREADY    | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RDATA     |  in |   32|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RLAST     |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RID       |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RUSER     |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_RRESP     |  in |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BVALID    |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BREADY    | out |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BRESP     |  in |    2|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BID       |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|m_axi_W_ddr_BUSER     |  in |    1|    m_axi   |     W_ddr    |    pointer   |
+|W_ddr_offset          |  in |   30|   ap_none  | W_ddr_offset |    scalar    |
+|length_r              |  in |   32|   ap_none  |   length_r   |    scalar    |
++----------------------+-----+-----+------------+--------------+--------------+
+

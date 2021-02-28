@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv_v1.cpp" path="/home/dzl/VOLUME/High-Level-Synthesis-Flow-on-Zynq-using-Vivado-HLS/source/lab6/conv_v1.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="conv_test.cpp" path="/home/dzl/VOLUME/High-Level-Synthesis-Flow-on-Zynq-using-Vivado-HLS/source/lab6/conv_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

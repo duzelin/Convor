@@ -1,0 +1,50 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="Systolic_Array_Conv" label="Row" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Systolic_Array_Conv" label="Load_Line" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Systolic_Array_Conv" label="Channel" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Load_In" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Load_W_ALL" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Write_O_ALL" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Load_In_ALL" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="PE" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Drain_In" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Drain_W" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Read_In_buf_line" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Read_In_buf_line" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Read_In_buf_line" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Read_W_buf" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="Write_C_buf" label="Inner" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

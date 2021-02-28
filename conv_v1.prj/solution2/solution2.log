@@ -1,0 +1,1487 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2 (for scalar propagation only).
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2 (for start propagation only).
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2.
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2 (for scalar propagation only).
+INFO: [XFORM 203-701] Set default FIFO size in dataflow to 2 (for start propagation only).
+INFO: [XFORM 203-701] Set the default channel type in dataflow to FIFO.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'conv_v1.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1744.637 ; gain = 1294.723 ; free physical = 4462 ; free virtual = 12764
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1744.637 ; gain = 1294.723 ; free physical = 4462 ; free virtual = 12764
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1744.637 ; gain = 1294.723 ; free physical = 4456 ; free virtual = 12758
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1744.637 ; gain = 1294.723 ; free physical = 4453 ; free virtual = 12756
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row' (conv_v1.cpp:340) in function 'Systolic_Array_Conv' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'PE_array' (conv_v1.cpp:179).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Write_O_ALL' (conv_v1.cpp:101).
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Inner' (conv_v1.cpp:105) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Load_W_ALL' (conv_v1.cpp:68).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Load_In_ALL' (conv_v1.cpp:31).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Read_In_buf_line' (conv_v1.cpp:233).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Write_C_buf' (conv_v1.cpp:292).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Drain_W' (conv_v1.cpp:162).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'Drain_In' (conv_v1.cpp:145).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'PE' (conv_v1.cpp:114).
+WARNING: [XFORM 203-503] Cannot unroll loop 'Load_Line' (conv_v1.cpp:344) in function 'Systolic_Array_Conv': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Channel' (conv_v1.cpp:351) in function 'Systolic_Array_Conv' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Row' (conv_v1.cpp:203) in function 'PE_array' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Col' (conv_v1.cpp:205) in function 'PE_array' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Drain_In' (conv_v1.cpp:211) in function 'PE_array' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Drain_W' (conv_v1.cpp:215) in function 'PE_array' completely with a factor of 4.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (conv_v1.cpp:103) in function 'Write_O_ALL' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Inner' (conv_v1.cpp:105) in function 'Write_O_ALL' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (conv_v1.cpp:106) in function 'Write_O_ALL' completely with a factor of 4.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Load_W_Out' (conv_v1.cpp:69) in function 'Load_W_ALL' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (conv_v1.cpp:71) in function 'Load_W_ALL' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (conv_v1.cpp:73) in function 'Load_W_ALL' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:75) in function 'Load_W_ALL' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (conv_v1.cpp:77) in function 'Load_W_ALL' completely with a factor of 4.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Load_In_Out' (conv_v1.cpp:32) in function 'Load_In_ALL' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (conv_v1.cpp:34) in function 'Load_In_ALL' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (conv_v1.cpp:36) in function 'Load_In_ALL' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:38) in function 'Load_In_ALL' completely: variable loop bound.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (conv_v1.cpp:40) in function 'Load_In_ALL' completely with a factor of 4.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (conv_v1.cpp:235) in function 'Read_In_buf_line' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:237) in function 'Read_In_buf_line' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-2' (conv_v1.cpp:243) in function 'Read_In_buf_line' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner_pad' (conv_v1.cpp:246) in function 'Read_In_buf_line' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner_norm' (conv_v1.cpp:251) in function 'Read_In_buf_line' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (conv_v1.cpp:293) in function 'Write_C_buf': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (conv_v1.cpp:295) in function 'Write_C_buf' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:297) in function 'Write_C_buf' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Drain_W_Out' (conv_v1.cpp:164) in function 'Drain_W' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (conv_v1.cpp:166) in function 'Drain_W' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (conv_v1.cpp:168) in function 'Drain_W' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:170) in function 'Drain_W' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Drain_In_Out' (conv_v1.cpp:147) in function 'Drain_In' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (conv_v1.cpp:149) in function 'Drain_In' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (conv_v1.cpp:151) in function 'Drain_In' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:153) in function 'Drain_In' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (conv_v1.cpp:119) in function 'PE' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1' (conv_v1.cpp:122) in function 'PE' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.1.1' (conv_v1.cpp:124) in function 'PE' completely: variable loop bound.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Inner' (conv_v1.cpp:126) in function 'PE' completely: variable loop bound.
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'In_inter' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'W_inter' .
+INFO: [XFORM 203-102] Automatically partitioning streamed array 'O_inter' .
+INFO: [XFORM 203-101] Partitioning array 'In_inter' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'W_inter' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'O_inter' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'In_inter' in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'W_inter' in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'O_inter' in dimension 2 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'In_buf' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'In_buf' has read operations in process function 'Load_In_ALL'.
+WARNING: [XFORM 203-713] Reading dataflow channel 'W_buf' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'W_buf' has read operations in process function 'Load_W_ALL'.
+WARNING: [XFORM 203-713] All the elements of global array 'Out_buf' should be updated in process function 'Write_O_ALL', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'PE_array', detected/extracted 34 process function(s): 
+	 'PE_array.entry141'
+	 'Load_In_ALL'
+	 'Load_W_ALL'
+	 'PE21'
+	 'PE_array_Block_.preheader.preheader640644_proc'
+	 'PE22'
+	 'PE_array_Block_.preheader.preheader640646_proc'
+	 'PE23'
+	 'PE_array_Block_.preheader.preheader640648_proc'
+	 'PE24'
+	 'PE_array_Block_.preheader.preheader640650_proc'
+	 'PE25'
+	 'PE26'
+	 'PE27'
+	 'PE28'
+	 'PE_array_Block_.preheader.preheader640655_proc'
+	 'PE29'
+	 'PE30'
+	 'PE31'
+	 'PE32'
+	 'PE_array_Block_.preheader.preheader640660_proc'
+	 'PE33'
+	 'PE34'
+	 'PE35'
+	 'PE36'
+	 'Write_O_ALL'
+	 'Drain_In37'
+	 'Drain_In38'
+	 'Drain_In39'
+	 'Drain_In40'
+	 'Drain_W41'
+	 'Drain_W42'
+	 'Drain_W43'
+	 'Drain_W44'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 10 to 4 for loop 'Loop-0' (conv_v1.cpp:294:1) in function 'Write_C_buf'.
+WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 4) < AVE (= 5)) for loop 'Loop-0' (conv_v1.cpp:294:1) in function 'Write_C_buf'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE36'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE35'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE34'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE33'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE32'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE31'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE30'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE29'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE28'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE27'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE26'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE25'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE24'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE23'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE22'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv_v1.cpp:126:36) to (conv_v1.cpp:126:30) in function 'PE21'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'Systolic_Array_Conv' (conv_v1.cpp:307)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'Load_W_ALL' (conv_v1.cpp:68)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1744.637 ; gain = 1294.723 ; free physical = 4428 ; free virtual = 12732
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (conv_v1.cpp:295:13) in function 'Write_C_buf' : 
+
+the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (conv_v1.cpp:293:13) in function 'Write_C_buf'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Row' (conv_v1.cpp:340:31) in function 'Systolic_Array_Conv' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (conv_v1.cpp:235:14) in function 'Read_In_buf_line'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE36'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE36'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE36' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE35'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE35'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE35' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE34'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE34'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE34' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE33'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE33'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE33' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE32'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE32'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE32' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE31'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE31'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE31' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE30'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE30'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE30' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE29'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE29'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE29' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE28'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE28'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE28' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE27'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE27'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE27' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE26'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE26'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE26' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE25'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE25'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE25' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE24'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE24'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE24' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE23'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE23'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE23' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE22'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE22'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE22' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:124:14) in function 'PE21'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:122:22) in function 'PE21'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (conv_v1.cpp:119:18) in function 'PE21' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:73:14) in function 'Load_W_ALL'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:71:15) in function 'Load_W_ALL'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Load_W_Out' (conv_v1.cpp:69:47) in function 'Load_W_ALL'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:36:14) in function 'Load_In_ALL'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:34:15) in function 'Load_In_ALL'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Load_In_Out' (conv_v1.cpp:32:45) in function 'Load_In_ALL'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:168:14) in function 'Drain_W44'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:166:15) in function 'Drain_W44'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_W_Out' (conv_v1.cpp:164:48) in function 'Drain_W44'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:168:14) in function 'Drain_W43'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:166:15) in function 'Drain_W43'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_W_Out' (conv_v1.cpp:164:48) in function 'Drain_W43'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:168:14) in function 'Drain_W42'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:166:15) in function 'Drain_W42'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_W_Out' (conv_v1.cpp:164:48) in function 'Drain_W42'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:168:14) in function 'Drain_W41'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:166:15) in function 'Drain_W41'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_W_Out' (conv_v1.cpp:164:48) in function 'Drain_W41'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:151:14) in function 'Drain_In40'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:149:15) in function 'Drain_In40'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_In_Out' (conv_v1.cpp:147:49) in function 'Drain_In40'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:151:14) in function 'Drain_In39'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:149:15) in function 'Drain_In39'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_In_Out' (conv_v1.cpp:147:49) in function 'Drain_In39'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:151:14) in function 'Drain_In38'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:149:15) in function 'Drain_In38'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_In_Out' (conv_v1.cpp:147:49) in function 'Drain_In38'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (conv_v1.cpp:151:14) in function 'Drain_In37'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (conv_v1.cpp:149:15) in function 'Drain_In37'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Drain_In_Out' (conv_v1.cpp:147:49) in function 'Drain_In37'.
+WARNING: [HLS 200-466] Port 'W_ddr'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [HLS 200-466] Port 'Out_ddr'() has different latency/depth on the same m_axi bundle:'gmem'
+WARNING: [XFORM 203-631] Renaming function 'PE_array_Block_.preheader.preheader640660_proc' to 'PE_array_Block_.preh' (conv_v1.cpp:207:2)
+WARNING: [XFORM 203-631] Renaming function 'PE_array_Block_.preheader.preheader640655_proc' to 'PE_array_Block_.preh.1' (conv_v1.cpp:207:2)
+WARNING: [XFORM 203-631] Renaming function 'PE_array_Block_.preheader.preheader640650_proc' to 'PE_array_Block_.preh.2' (conv_v1.cpp:207:2)
+WARNING: [XFORM 203-631] Renaming function 'PE_array_Block_.preheader.preheader640648_proc' to 'PE_array_Block_.preh.3' (conv_v1.cpp:207:2)
+WARNING: [XFORM 203-631] Renaming function 'PE_array_Block_.preheader.preheader640646_proc' to 'PE_array_Block_.preh.4' (conv_v1.cpp:207:2)
+WARNING: [XFORM 203-631] Renaming function 'PE_array_Block_.preheader.preheader640644_proc' to 'PE_array_Block_.preh.5' (conv_v1.cpp:207:2)
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'In_ddr' (conv_v1.cpp:253:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'W_ddr' (conv_v1.cpp:276:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_buf' (conv_v1.cpp:108:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'Out_buf' (conv_v1.cpp:301:8)
+INFO: [HLS 200-472] Inferring partial write operation for 'W' (conv_v1.cpp:276:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'In_buf' (conv_v1.cpp:239:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'In_buf' (conv_v1.cpp:248:2)
+INFO: [HLS 200-472] Inferring partial write operation for 'In_buf' (conv_v1.cpp:253:2)
+INFO: [XFORM 203-714] Function 'PE_array' failed dataflow checking:  A dataflow region cannot be instantiated from within a pipelined loop  (conv_v1.cpp:188:1), pipe: (conv_v1.cpp:352:1). Ignoring pipeline directive to allow the dataflow directive to take precedence. 
+INFO: [XFORM 203-714] Function 'PE_array' failed dataflow checking:  A dataflow region cannot be instantiated from within a pipelined loop  (conv_v1.cpp:188:1), pipe: (conv_v1.cpp:341:1). Ignoring pipeline directive to allow the dataflow directive to take precedence. 
+INFO: [XFORM 203-714] Function 'PE_array' failed dataflow checking:  A dataflow region cannot be instantiated from within a pipelined loop  (conv_v1.cpp:188:1), pipe: (conv_v1.cpp:345:1). Ignoring pipeline directive to allow the dataflow directive to take precedence. 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1744.637 ; gain = 1294.723 ; free physical = 4081 ; free virtual = 12385
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Systolic_Array_Conv' ...
+WARNING: [SYN 201-103] Legalizing function name 'PE_array.entry6' to 'PE_array_entry6'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array.entry141' to 'PE_array_entry141'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array_Block_.preh.5' to 'PE_array_Block_preh_5'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array_Block_.preh.4' to 'PE_array_Block_preh_4'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array_Block_.preh.3' to 'PE_array_Block_preh_3'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array_Block_.preh.2' to 'PE_array_Block_preh_2'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array_Block_.preh.1' to 'PE_array_Block_preh_1'.
+WARNING: [SYN 201-103] Legalizing function name 'PE_array_Block_.preh' to 'PE_array_Block_preh'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Read_W_buf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.62 seconds; current allocated memory: 565.215 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 565.353 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Read_In_buf_line' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 566.140 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 567.115 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_entry6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 567.417 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 567.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_entry141' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 567.592 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 567.790 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Load_In_ALL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Load_In_Out_L_Inner'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('tmp', conv_v1.cpp:43->conv_v1.cpp:179) on array 'In_buf' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'In_buf'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 39.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 568.372 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 569.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Load_W_ALL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Load_W_Out_L_Inner'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('tmp', conv_v1.cpp:78) on array 'W_buf' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'W_buf'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 569.798 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 570.358 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE21' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130) and 'fadd' operation ('O_temp', conv_v1.cpp:131).
+WARNING: [SCHED 204-68] The II Violation in module 'PE21' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130) and 'fadd' operation ('O_temp', conv_v1.cpp:131).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE21' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131) [105]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130) [106]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130) [91]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131) [105]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 570.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 571.151 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_Block_preh_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 571.205 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 571.261 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE22' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE22' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE22' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [103]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [104]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [89]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [103]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 571.556 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 571.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_Block_preh_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 572.032 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 572.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE23' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE23' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE23' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [103]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [104]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [89]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [103]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 572.364 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 572.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_Block_preh_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 572.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 572.926 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE24' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE24' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE24' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE24' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [94]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [95]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [80]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [94]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 573.210 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 573.617 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_Block_preh_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 573.682 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 573.772 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE25' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE25' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE25' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE25' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [86]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [71]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 574.007 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 574.384 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE26' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE26' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE26' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [86]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [71]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 574.651 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 575.029 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE27' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE27' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE27' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [86]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [71]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 575.265 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 575.643 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE28' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE28' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE28' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE28' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [94]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [95]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [80]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [94]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 575.952 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 576.360 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_Block_preh_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 576.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 576.530 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE29' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE29' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE29' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE29' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [86]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [71]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 576.766 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 577.146 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE30' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE30' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE30' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE30' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [86]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [71]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 577.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 577.800 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE31' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE31' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE31' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE31' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [86]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [71]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [85]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 578.036 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 578.416 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE32' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE32' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE32' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [94]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [95]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [80]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [94]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 578.729 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 579.135 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array_Block_preh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 579.203 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 579.295 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE33' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE33' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE33' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE33' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [76]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [77]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [62]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [76]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 579.521 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 579.864 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE34' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE34' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE34' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE34' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [76]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [77]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [62]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [76]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 580.138 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 580.481 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE35' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE35' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE35' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [76]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [77]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [62]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [76]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 580.740 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 581.084 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE36' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L_L_Inner'.
+WARNING: [SCHED 204-68] The II Violation in module 'PE36' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+WARNING: [SCHED 204-68] The II Violation in module 'PE36' (Loop: L_L_Inner): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) and 'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 8.
+WARNING: [SCHED 204-21] Estimated clock period (13.323ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'PE36' consists of the following:
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [91]  (6.44 ns)
+	'select' operation ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [92]  (0.449 ns)
+	'phi' operation ('O_temp') with incoming values : ('O_temp', conv_v1.cpp:130->conv_v1.cpp:207) [77]  (0 ns)
+	'fadd' operation ('O_temp', conv_v1.cpp:131->conv_v1.cpp:207) [91]  (6.44 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 581.374 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 581.775 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Write_O_ALL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.4 seconds; current allocated memory: 582.093 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 582.667 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_In37' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_In_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 582.790 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 582.967 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_In38' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_In_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 583.064 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 583.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_In39' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_In_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 583.319 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 583.495 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_In40' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_In_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 583.650 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 583.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_W41' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_W_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 583.887 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 584.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_W42' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_W_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 584.177 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 584.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_W43' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_W_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 584.411 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 584.552 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Drain_W44' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Drain_W_Out_L_Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 584.687 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 584.826 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PE_array' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 585.922 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.68 seconds; current allocated memory: 591.385 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Write_C_buf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Inner'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 592.122 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 592.427 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Systolic_Array_Conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 592.859 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 594.064 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Read_W_buf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Read_W_buf'.
+INFO: [HLS 200-111]  Elapsed time: 0.6 seconds; current allocated memory: 595.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Read_In_buf_line' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_srem_32ns_32ns_32_36_seq_1' to 'Systolic_Array_Cobkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_srem_32ns_32ns_32_36_1' to 'Systolic_Array_Cocud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_Cobkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_Cocud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Read_In_buf_line'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 597.558 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_entry6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_entry6'.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 600.046 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_entry141' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_entry141'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 600.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Load_In_ALL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_Cocud': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Load_In_ALL'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 602.264 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Load_W_ALL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Load_W_ALL'.
+INFO: [HLS 200-111]  Elapsed time: 0.37 seconds; current allocated memory: 605.567 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_fadd_32ns_32ns_32_4_full_dsp_1' to 'Systolic_Array_CodEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_fmul_32ns_32ns_32_2_max_dsp_1' to 'Systolic_Array_CoeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE21'.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 608.403 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_Block_preh_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_Block_preh_5'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 609.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE22'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 610.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_Block_preh_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_Block_preh_4'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 611.978 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE23'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 612.913 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_Block_preh_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_Block_preh_3'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 614.194 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE24' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE24'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 615.107 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_Block_preh_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_Block_preh_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 616.343 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE25' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE25'.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 617.274 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE26' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE26'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 618.948 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE27' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE27'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 620.669 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE28' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE28'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 622.419 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_Block_preh_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_Block_preh_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 623.751 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE29' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE29'.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 624.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE30' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE30'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 626.366 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE31' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE31'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 628.025 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE32'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 629.802 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array_Block_preh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array_Block_preh'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 631.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE33' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE33'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 632.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE34' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE34'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 633.626 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE35'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 635.261 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE36' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CodEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Systolic_Array_CoeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE36'.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 636.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Write_O_ALL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Write_O_ALL'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 638.877 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_In37' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_In37'.
+INFO: [HLS 200-111]  Elapsed time: 0.27 seconds; current allocated memory: 641.071 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_In38' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_In38'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 641.846 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_In39' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_In39'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 642.656 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_In40' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_In40'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 643.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_W41' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_W41'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 644.236 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_W42' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_W42'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 645.009 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_W43' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_W43'.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 645.804 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Drain_W44' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Drain_W44'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 646.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PE_array' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_entry141_U0' to 'start_for_PE_arrafYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_Block_preh_5_U0' to 'start_for_PE_arrag8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_Block_preh_4_U0' to 'start_for_PE_arrahbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_Block_preh_3_U0' to 'start_for_PE_arraibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_Block_preh_2_U0' to 'start_for_PE_arrajbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_Block_preh_1_U0' to 'start_for_PE_arrakbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_PE_array_Block_preh_U0' to 'start_for_PE_arralbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_In37_U0' to 'start_for_Drain_Imb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_In38_U0' to 'start_for_Drain_Incg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_In39_U0' to 'start_for_Drain_Iocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_W41_U0' to 'start_for_Drain_WpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_W42_U0' to 'start_for_Drain_WqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_W43_U0' to 'start_for_Drain_WrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_In40_U0' to 'start_for_Drain_Isc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Drain_W44_U0' to 'start_for_Drain_Wtde' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PE_array'.
+INFO: [HLS 200-111]  Elapsed time: 0.8 seconds; current allocated memory: 655.592 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Write_C_buf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Write_C_buf'.
+INFO: [HLS 200-111]  Elapsed time: 1.82 seconds; current allocated memory: 663.145 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Systolic_Array_Conv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/In_ddr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/W_ddr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/Out_ddr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/stride' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/padding' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/Rin' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/Cin' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/CHin' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/R' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/C' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/CHout' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Systolic_Array_Conv/K' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Systolic_Array_Conv' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'p_chin_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_chout_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_r_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_c_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_cin_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_k_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_s_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_p_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_rinp_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'p_cinp_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'In_buffer_length' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'In_buffer_start' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'In_buffer_end' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Out_buf_row' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'Out_buf_row' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'In_buf_row' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Out_buf_cho' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'Out_buf_cho' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Register 'Out_buf_row_count' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'In_ddr', 'W_ddr' and 'Out_ddr' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_In_buffer' to 'Systolic_Array_Coudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_W_buffer' to 'Systolic_Array_Covdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Systolic_Array_Conv_Out_buffer' to 'Systolic_Array_CowdI' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Systolic_Array_Conv'.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 666.384 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 75.06 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'Systolic_Array_Cobkb_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'Systolic_Array_Cocud_div'
+INFO: [RTMG 210-285] Implementing FIFO 'row_c1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c_U(fifo_w32_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c707_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c708_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c709_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c710_U(fifo_w32_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c711_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c712_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c713_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_0_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_1_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_2_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_3_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c714_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c715_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c716_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_0_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_0_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_0_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_0_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_1_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_0_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_0_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c717_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c718_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c719_U(fifo_w32_d8_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c720_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c721_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c722_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c723_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c724_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c725_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c726_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c727_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_loc_c_U(fifo_w32_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_1_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_0_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_0_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c728_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_loc_c729_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c730_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c731_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c732_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c733_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c734_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c735_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c736_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c737_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c738_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c739_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_1_loc_c_U(fifo_w32_d4_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_1_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_0_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_0_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'row_c740_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_1_loc_c741_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c742_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c743_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c744_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c745_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c746_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c747_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c748_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c749_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c750_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c751_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_2_loc_c_U(fifo_w32_d5_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_1_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_0_4_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_0_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_2_loc_c752_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c753_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c754_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c755_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c756_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c757_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c758_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c759_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c760_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_3_loc_c_U(fifo_w32_d3_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_3_loc_c761_U(fifo_w32_d4_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_3_loc_c762_U(fifo_w32_d5_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_3_loc_c763_U(fifo_w32_d6_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_2_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_1_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_1_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c764_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c765_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c766_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c767_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c768_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c769_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_2_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_1_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_1_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_loc_c770_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c771_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c772_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c773_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c774_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c775_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_2_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_1_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_1_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_1_loc_c776_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c777_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c778_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c779_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c780_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c781_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_2_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_1_4_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_1_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_2_loc_c782_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c783_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c784_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c785_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c786_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c787_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c788_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c789_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c790_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_4_loc_c_U(fifo_w32_d4_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_4_loc_c791_U(fifo_w32_d5_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_4_loc_c792_U(fifo_w32_d6_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_4_loc_c793_U(fifo_w32_d7_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_3_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_2_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_2_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'cho_c794_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c795_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c796_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c797_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c798_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c799_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_3_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_2_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_2_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_loc_c800_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c801_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c802_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c803_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c804_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c805_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_3_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_2_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_2_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_1_loc_c806_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c807_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c808_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c809_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c810_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c811_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_3_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_2_4_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_2_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_2_loc_c812_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c813_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c814_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c815_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c816_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chout_c817_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c818_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c819_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_r_c820_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_5_loc_c_U(fifo_w32_d5_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_5_loc_c821_U(fifo_w32_d6_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_5_loc_c822_U(fifo_w32_d7_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'add_ln207_5_loc_c823_U(fifo_w32_d8_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_4_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_3_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_3_0_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c824_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c825_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c826_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_4_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_3_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_3_1_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c827_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c828_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c829_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_4_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_3_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_3_2_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c830_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c831_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_k_c832_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'W_inter_4_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'In_inter_3_4_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'O_inter_3_3_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c833_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c834_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_c_c835_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'p_chin_c836_U(fifo_w32_d2_A)' using Shift Registers.
+INFO: 

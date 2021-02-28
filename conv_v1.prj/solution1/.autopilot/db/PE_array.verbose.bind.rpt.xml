@@ -1,0 +1,80 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'PE_array'" level="0">
+<item name = "Date">Sun Feb 28 10:35:29 2021
+</item>
+<item name = "Version">2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)</item>
+<item name = "Project">conv_v1.prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.587 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">173, 139421, 1.730 us, 1.394 ms, 162, 139422, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Load_In_ALL_fu_1378">Load_In_ALL, 161, 139421, 1.610 us, 1.394 ms, 161, 139421, none</column>
+<column name="grp_PE21_fu_1408">PE21, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE22_fu_1439">PE22, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE23_fu_1467">PE23, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE24_fu_1495">PE24, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE28_fu_1520">PE28, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE32_fu_1545">PE32, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE36_fu_1570">PE36, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE25_fu_1594">PE25, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE26_fu_1616">PE26, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE29_fu_1638">PE29, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE27_fu_1660">PE27, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE30_fu_1682">PE30, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE31_fu_1704">PE31, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE33_fu_1726">PE33, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE34_fu_1745">PE34, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_PE35_fu_1764">PE35, 14, 72221, 0.140 us, 0.722 ms, 14, 72221, none</column>
+<column name="grp_Load_W_ALL_fu_1783">Load_W_ALL, 21, 13421, 0.210 us, 0.134 ms, 21, 13421, none</column>
+<column name="grp_Drain_In37_fu_1797">Drain_In37, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_W41_fu_1805">Drain_W41, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_In38_fu_1813">Drain_In38, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_W42_fu_1821">Drain_W42, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_In39_fu_1829">Drain_In39, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_W43_fu_1837">Drain_W43, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_In40_fu_1845">Drain_In40, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Drain_W44_fu_1853">Drain_W44, 8, 1721, 80.000 ns, 17.210 us, 8, 1721, none</column>
+<column name="grp_Write_O_ALL_fu_1861">Write_O_ALL, 27, 261, 0.270 us, 2.610 us, 27, 261, none</column>
+<column name="call_ln179_PE_array_Block_preh_2_fu_1888">PE_array_Block_preh_2, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln179_PE_array_Block_preh_1_fu_1897">PE_array_Block_preh_1, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln179_PE_array_Block_preh_fu_1906">PE_array_Block_preh, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln179_PE_array_Block_preh_5_fu_1915">PE_array_Block_preh_5, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln179_PE_array_Block_preh_4_fu_1921">PE_array_Block_preh_4, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln179_PE_array_Block_preh_3_fu_1927">PE_array_Block_preh_3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln188_PE_array_entry141_fu_1933">PE_array_entry141, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln179_PE_array_entry6_fu_1948">PE_array_entry6, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

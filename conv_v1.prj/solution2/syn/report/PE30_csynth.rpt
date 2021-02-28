@@ -1,0 +1,247 @@
+
+
+================================================================
+== Vivado HLS Report for 'PE30'
+================================================================
+* Date:           Sun Feb 28 11:05:44 2021
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        conv_v1.prj
+* Solution:       solution2
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 10.00 ns | 13.323 ns |   1.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   | min |  max  |   Type  |
+    +---------+---------+----------+----------+-----+-------+---------+
+    |       12|    30072| 0.160 us | 0.401 ms |   12|  30072|   none  |
+    +---------+---------+----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+-----------+-----------+-----------+----------+----------+
+        |              |  Latency (cycles) | Iteration |  Initiation Interval  |   Trip   |          |
+        |   Loop Name  |   min   |   max   |  Latency  |  achieved |   target  |   Count  | Pipelined|
+        +--------------+---------+---------+-----------+-----------+-----------+----------+----------+
+        |- Loop 1      |       10|    30070| 10 ~ 3007 |          -|          -|  1 ~ 10  |    no    |
+        | + L_L_Inner  |        7|     3004|          8|          3|          1| 1 ~ 1000 |    yes   |
+        +--------------+---------+---------+-----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      6|       0|     359|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      5|     355|     349|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     266|    -|
+|Register         |        0|      -|     651|      32|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|     11|    1006|    1006|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      624|   1728|  460800|  230400|   96|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------------+---------+-------+-----+-----+-----+
+    |          Instance         |        Module        | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +---------------------------+----------------------+---------+-------+-----+-----+-----+
+    |Systolic_Array_CodEe_U289  |Systolic_Array_CodEe  |        0|      2|  227|  214|    0|
+    |Systolic_Array_CoeOg_U290  |Systolic_Array_CoeOg  |        0|      3|  128|  135|    0|
+    +---------------------------+----------------------+---------+-------+-----+-----+-----+
+    |Total                      |                      |        0|      5|  355|  349|    0|
+    +---------------------------+----------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+-----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+-----+------------+------------+
+    |bound4_fu_303_p2                  |     *    |      3|  0|   46|          64|          32|
+    |bound_fu_290_p2                   |     *    |      3|  0|   20|          32|          32|
+    |add_ln119_fu_318_p2               |     +    |      0|  0|   38|          31|           1|
+    |add_ln122_fu_329_p2               |     +    |      0|  0|  103|          96|           1|
+    |and_ln130_fu_281_p2               |    and   |      0|  0|    2|           1|           1|
+    |ap_block_pp0_stage1_01001         |    and   |      0|  0|    2|           1|           1|
+    |icmp_ln119_fu_313_p2              |   icmp   |      0|  0|   20|          32|          32|
+    |icmp_ln122_fu_324_p2              |   icmp   |      0|  0|   50|          96|          96|
+    |icmp_ln130_7_fu_275_p2            |   icmp   |      0|  0|   20|          32|          32|
+    |icmp_ln130_fu_269_p2              |   icmp   |      0|  0|   20|          32|          32|
+    |ap_block_state1                   |    or    |      0|  0|    2|           1|           1|
+    |ap_block_state5_pp0_stage1_iter0  |    or    |      0|  0|    2|           1|           1|
+    |O_temp_7_fu_335_p3                |  select  |      0|  0|   32|           1|          32|
+    |ap_enable_pp0                     |    xor   |      0|  0|    2|           1|           2|
+    +----------------------------------+----------+-------+---+-----+------------+------------+
+    |Total                             |          |      6|  0|  359|         421|         296|
+    +----------------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |In_inter_2_1_blk_n                         |   9|          2|    1|          2|
+    |In_inter_2_2_blk_n                         |   9|          2|    1|          2|
+    |O_inter_2_1_blk_n                          |   9|          2|    1|          2|
+    |W_inter_2_1_blk_n                          |   9|          2|    1|          2|
+    |W_inter_3_1_blk_n                          |   9|          2|    1|          2|
+    |add_ln207_4_loc_blk_n                      |   9|          2|    1|          2|
+    |add_ln207_loc_blk_n                        |   9|          2|    1|          2|
+    |add_ln207_loc_out_blk_n                    |   9|          2|    1|          2|
+    |ap_NS_fsm                                  |  41|          8|    1|          8|
+    |ap_done                                    |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2                    |   9|          2|    1|          2|
+    |ap_phi_mux_indvar_flatten13_phi_fu_240_p4  |   9|          2|   96|        192|
+    |ap_phi_mux_tmp_phi_fu_252_p4               |   9|          2|   32|         64|
+    |col_0_i_i_i_reg_225                        |   9|          2|   31|         62|
+    |indvar_flatten13_reg_236                   |   9|          2|   96|        192|
+    |p_c_out_blk_n                              |   9|          2|    1|          2|
+    |p_c_s_blk_n                                |   9|          2|    1|          2|
+    |p_chin_out_blk_n                           |   9|          2|    1|          2|
+    |p_chin_s_blk_n                             |   9|          2|    1|          2|
+    |p_chout_out_blk_n                          |   9|          2|    1|          2|
+    |p_chout_s_blk_n                            |   9|          2|    1|          2|
+    |p_k_out_blk_n                              |   9|          2|    1|          2|
+    |p_k_s_blk_n                                |   9|          2|    1|          2|
+    |p_r_out_blk_n                              |   9|          2|    1|          2|
+    |p_r_s_blk_n                                |   9|          2|    1|          2|
+    |tmp_reg_247                                |   9|          2|   32|         64|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      | 266|         58|  308|        622|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |add_ln119_reg_371         |  31|   0|   31|          0|
+    |add_ln122_reg_380         |  96|   0|   96|          0|
+    |and_ln130_reg_357         |   1|   0|    1|          0|
+    |ap_CS_fsm                 |   7|   0|    7|          0|
+    |ap_done_reg               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2   |   1|   0|    1|          0|
+    |bound4_reg_362            |  96|   0|   96|          0|
+    |col_0_i_i_i_reg_225       |  31|   0|   31|          0|
+    |icmp_ln122_reg_376        |   1|   0|    1|          0|
+    |indvar_flatten13_reg_236  |  96|   0|   96|          0|
+    |p_c_read_reg_342          |  32|   0|   32|          0|
+    |p_chin_read_reg_347       |  32|   0|   32|          0|
+    |p_k_read_reg_352          |  32|   0|   32|          0|
+    |tmp_35_reg_390            |  32|   0|   32|          0|
+    |tmp_36_reg_385            |  32|   0|   32|          0|
+    |tmp_4_i_i_i_reg_395       |  32|   0|   32|          0|
+    |tmp_reg_247               |  32|   0|   32|          0|
+    |icmp_ln122_reg_376        |  64|  32|    1|          0|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 651|  32|  588|          0|
+    +--------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++--------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs |        PE30       | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs |        PE30       | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs |        PE30       | return value |
+|ap_done                   | out |    1| ap_ctrl_hs |        PE30       | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs |        PE30       | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs |        PE30       | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs |        PE30       | return value |
+|W_inter_2_1_dout          |  in |   32|   ap_fifo  |    W_inter_2_1    |    pointer   |
+|W_inter_2_1_empty_n       |  in |    1|   ap_fifo  |    W_inter_2_1    |    pointer   |
+|W_inter_2_1_read          | out |    1|   ap_fifo  |    W_inter_2_1    |    pointer   |
+|In_inter_2_1_dout         |  in |   32|   ap_fifo  |    In_inter_2_1   |    pointer   |
+|In_inter_2_1_empty_n      |  in |    1|   ap_fifo  |    In_inter_2_1   |    pointer   |
+|In_inter_2_1_read         | out |    1|   ap_fifo  |    In_inter_2_1   |    pointer   |
+|W_inter_3_1_din           | out |   32|   ap_fifo  |    W_inter_3_1    |    pointer   |
+|W_inter_3_1_full_n        |  in |    1|   ap_fifo  |    W_inter_3_1    |    pointer   |
+|W_inter_3_1_write         | out |    1|   ap_fifo  |    W_inter_3_1    |    pointer   |
+|In_inter_2_2_din          | out |   32|   ap_fifo  |    In_inter_2_2   |    pointer   |
+|In_inter_2_2_full_n       |  in |    1|   ap_fifo  |    In_inter_2_2   |    pointer   |
+|In_inter_2_2_write        | out |    1|   ap_fifo  |    In_inter_2_2   |    pointer   |
+|add_ln207_4_loc_dout      |  in |   32|   ap_fifo  |  add_ln207_4_loc  |    pointer   |
+|add_ln207_4_loc_empty_n   |  in |    1|   ap_fifo  |  add_ln207_4_loc  |    pointer   |
+|add_ln207_4_loc_read      | out |    1|   ap_fifo  |  add_ln207_4_loc  |    pointer   |
+|add_ln207_loc_dout        |  in |   32|   ap_fifo  |   add_ln207_loc   |    pointer   |
+|add_ln207_loc_empty_n     |  in |    1|   ap_fifo  |   add_ln207_loc   |    pointer   |
+|add_ln207_loc_read        | out |    1|   ap_fifo  |   add_ln207_loc   |    pointer   |
+|O_inter_2_1_din           | out |   32|   ap_fifo  |    O_inter_2_1    |    pointer   |
+|O_inter_2_1_full_n        |  in |    1|   ap_fifo  |    O_inter_2_1    |    pointer   |
+|O_inter_2_1_write         | out |    1|   ap_fifo  |    O_inter_2_1    |    pointer   |
+|p_c_s_dout                |  in |   32|   ap_fifo  |       p_c_s       |    pointer   |
+|p_c_s_empty_n             |  in |    1|   ap_fifo  |       p_c_s       |    pointer   |
+|p_c_s_read                | out |    1|   ap_fifo  |       p_c_s       |    pointer   |
+|p_chin_s_dout             |  in |   32|   ap_fifo  |      p_chin_s     |    pointer   |
+|p_chin_s_empty_n          |  in |    1|   ap_fifo  |      p_chin_s     |    pointer   |
+|p_chin_s_read             | out |    1|   ap_fifo  |      p_chin_s     |    pointer   |
+|p_chout_s_dout            |  in |   32|   ap_fifo  |     p_chout_s     |    pointer   |
+|p_chout_s_empty_n         |  in |    1|   ap_fifo  |     p_chout_s     |    pointer   |
+|p_chout_s_read            | out |    1|   ap_fifo  |     p_chout_s     |    pointer   |
+|p_k_s_dout                |  in |   32|   ap_fifo  |       p_k_s       |    pointer   |
+|p_k_s_empty_n             |  in |    1|   ap_fifo  |       p_k_s       |    pointer   |
+|p_k_s_read                | out |    1|   ap_fifo  |       p_k_s       |    pointer   |
+|p_r_s_dout                |  in |   32|   ap_fifo  |       p_r_s       |    pointer   |
+|p_r_s_empty_n             |  in |    1|   ap_fifo  |       p_r_s       |    pointer   |
+|p_r_s_read                | out |    1|   ap_fifo  |       p_r_s       |    pointer   |
+|add_ln207_loc_out_din     | out |   32|   ap_fifo  | add_ln207_loc_out |    pointer   |
+|add_ln207_loc_out_full_n  |  in |    1|   ap_fifo  | add_ln207_loc_out |    pointer   |
+|add_ln207_loc_out_write   | out |    1|   ap_fifo  | add_ln207_loc_out |    pointer   |
+|p_c_out_din               | out |   32|   ap_fifo  |      p_c_out      |    pointer   |
+|p_c_out_full_n            |  in |    1|   ap_fifo  |      p_c_out      |    pointer   |
+|p_c_out_write             | out |    1|   ap_fifo  |      p_c_out      |    pointer   |
+|p_chin_out_din            | out |   32|   ap_fifo  |     p_chin_out    |    pointer   |
+|p_chin_out_full_n         |  in |    1|   ap_fifo  |     p_chin_out    |    pointer   |
+|p_chin_out_write          | out |    1|   ap_fifo  |     p_chin_out    |    pointer   |
+|p_chout_out_din           | out |   32|   ap_fifo  |    p_chout_out    |    pointer   |
+|p_chout_out_full_n        |  in |    1|   ap_fifo  |    p_chout_out    |    pointer   |
+|p_chout_out_write         | out |    1|   ap_fifo  |    p_chout_out    |    pointer   |
+|p_k_out_din               | out |   32|   ap_fifo  |      p_k_out      |    pointer   |
+|p_k_out_full_n            |  in |    1|   ap_fifo  |      p_k_out      |    pointer   |
+|p_k_out_write             | out |    1|   ap_fifo  |      p_k_out      |    pointer   |
+|p_r_out_din               | out |   32|   ap_fifo  |      p_r_out      |    pointer   |
+|p_r_out_full_n            |  in |    1|   ap_fifo  |      p_r_out      |    pointer   |
+|p_r_out_write             | out |    1|   ap_fifo  |      p_r_out      |    pointer   |
++--------------------------+-----+-----+------------+-------------------+--------------+
+
