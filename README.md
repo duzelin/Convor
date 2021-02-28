@@ -13,20 +13,44 @@ Input: In_ddr, W_ddr, Out_ddr, Rin, Cin, CHin, Rout, Cout, CHout, padding, strid
 * In_ddr: Memory address of input feature map 
 * W_ddr: Memory address of weights for convolution
 * Out_ddr: Memory address of output feature map
-* Rin: row # of input feature map
-* Cin: col # of input feature map
-* CHin: channel # of input feature map
-* Rout: row # of output feature map
-* Cout: col # of output feature map
-* CHout: channel # of output feature map
-* padding: padding pixel # on the edge of input feature map
+* Rin: # of row of input feature map
+* Cin: # of col of input feature map
+* CHin: # of channel of input feature map
+* Rout: # of row of output feature map
+* Cout: # of col of output feature map
+* CHout: # of channel of output feature map
+* padding: # of padding pixel on the edge of input feature map
 * stride: The step size of convolution window moving
 */
 Input Buffer[Input_Buffer_Size];
 Weight Buffer[Input_Buffer_Size];
 Output Buffer[Input_Buffer_Size];
 
-//TODO
+M <- # of row of Systolic Array // M represents the parallelism of producing output row
+N <- # of col of Systolic Array // N represents the parallelism of producing output channel
+
+output_row <- 0 // output_row records the # of produced output row 
+output_channel <- 0 // output_channel records the # of produced output col
+input_row <- 0 // input_row records the start index of the input row needed for next convolution process
+reuse_row <- 0 //reuse_row records the # of row in the Input Buffer which can be reused in the next convolution process
+read_row_origin <- (M - 1) * stride + K // read_row_origin represents the # of input row needed for every convolution process
+read_row_ddr <- 0 // read_row_ddr records the # of row read from DDR to Input Buffer
+input_channel <- 0 // input_channel records the start index of the iput channel needed for next convolution process
+Read All weights from DDR to Weight Buffer.
+while output_row < Rout do
+  read_row_ddr = read_row_origin - reuse_row  
+  According to the information of input_row & read_row_ddr, read required slices of input feature map form DDR into Input Buffer.
+  output_channel <- 0
+  while output_channel < CHout do
+    Lunch Systolic Array to complete the convolution process and write the result into Output Buffer.
+    output_channel <- output_channel + N
+  end
+  Write the slices of output feature map back to DDR.
+  out_row <- output_row + M
+  input_row <- input_row + stride * M
+end
+
+
 
 ```
 ![avatar](./doc/脉冲阵列2.jpg)
