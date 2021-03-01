@@ -26,8 +26,8 @@ Input Buffer[Input_Buffer_Size];
 Weight Buffer[Input_Buffer_Size];
 Output Buffer[Input_Buffer_Size];
 
-//TODO
 
 ```
-![avatar](./doc/脉冲阵列2.jpg)
-![avatar](./doc/脉冲阵列1.jpg)
+![primitive structure](./doc/脉冲阵列2.jpg)
+![reorganized structure](./doc/脉冲阵列1.jpg)
+![solution compare](./doc/solution_compare.png)
