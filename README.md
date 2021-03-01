@@ -8,12 +8,16 @@ By the end of February, I have completed the construction of configurable convol
 
 # Using Systolic Array implement flexible convolution
 - ## Introduction of Systolic Array 
+
 ![avatar](./doc/脉冲阵列2.jpg)
+
 As shown in the picture above, in the primitive design, the structure of Systolic Array is straightforward. Each PE perform MACC on the input data that are passed form the previous processers. Every row of the Systolic Array produces the one corresponding row of the output feature map, ans every colum of it produces the one corresponding channel of the output feature map. The Systolic Array has M rows and N colums, a slice of output feature map which has M rows, N channels and all colums can be calculated at one time. As a result，the slice of input feature map which is needed for producing the corresponding row of the output feature map is supposed to flow along the row of the Systolic Array, the slice of weights which is needed for producing the corresponding channel of the output feature map should flow along the colum. Then I split the logic of loading data from the PE , for the preprocess that the function calculates the location of data used for each row or colum in Input Buffer or Weight Buffer needs a lot of computation. In general, the basic idea of using Systolic Array implement convolution is to unroll the output row loop with a factor of M and unroll the output channel loop with a factor of N.
 However, because there is overlap of the slice of input feature map needed for adjacent row of Systolic Array in most cases, adjacent Loadors of row may access the same location of Input Buffer, in other words, one input data may be loaded by multiple Loadors, this violates the rule of DATAFLOW directive in High Level Synthesis. And, because of the complexity of calculating the address of weights, the complier is not able to analyze out that actually each colum use different weights. Further more，each PE is in charge of computing and saving the result, hence, the Output Buffer will be read and writed by all of the PEs, the complier can not judge that actually each PE access individual elements. So, the Weight Buffer and Input Buffer face to the same problem. Eventually, I reorganize the code of Systolic Array by fusing Loaders of input and weights and extracting the process of saving result from PE to compose a Saver. In the Loader and Sver function, the UNROLL directive is exploited to maintain the parallelism. What"s more, to reduce the number of times of accessing Output Buffer, I exchange the order of loop in the PE function, there is no reading and writing intermediate result for computing each pixel of output feature map, as a result, the PE will no more read data from Output Buffer. Eventually，the DATAFLOW directive can be used to implement the internal data stream of Systolic array.
+
 ![avatar](./doc/脉冲阵列1.jpg)
+
 - ## Algorithm to schdule Systolic Array and Buffer
-The restriction of the limited on chip buffer's size is a significant challenge, as the scale of feature map and weights of the one convolution  layer of CNN is quite possible to exceed the volume that the on chip resource can achieve. There are some methods to address this problem. For example, pruning and quantification can be used at the network training phase to reduce the scale of parameter, optimization of computation graph for specific accelerators at the network compilation phase aims to maximize the efficiency of resource utilization. As for the design phase of a convolution accelerator, it is supposed to be taken into account that utilizing the data reusability within the adjacent slide window. 
+The restriction of the limited on chip buffer's size is a significant challenge, as the scale of feature map and weights of the one convolution  layer of CNN is quite possible to exceed the volume that the on chip resource can achieve. There are some methods to address this problem. For example, pruning and quantification can be used at the network training phase to reduce the scale of parameter, optimization of computation graph for specific accelerators at the network compilation phase aims to maximize the efficiency of resource utilization. As for the design phase of a convolution accelerator, it is supposed to be taken into account that utilizing the data reusability within the adjacent slide window. I assume that the Input Buffer can store the whole slice of input feature map which is needed for the compution unit running one time and the Weight Buffer can store all of the weights used for one convolution layer. The following is the pseudo code of the scheduling algorithm.
 ```
 Input: In_ddr, W_ddr, Out_ddr, Rin, Cin, CHin, Rout, Cout, CHout, padding, stride
 /*
@@ -57,3 +61,8 @@ while output_row < Rout do
   input_row <- input_row + stride * M
 end
 ```
+- ## Performance and Resource Optimization
+
+M=4, N=4. Solution2 has PIPLINE directives in some inner loop.
+
+![avatar](./doc/solution_compare.png)
